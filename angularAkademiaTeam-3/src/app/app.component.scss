@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: none;
+    box-sizing: border-box;
+    background: transparent;
+    font-family: inherit;
+}
+  a{
+    text-decoration: none;
+}
+  a img {
+    border: none;
+}
+  
+  button,
+  a {
+    cursor: pointer;
+    color: inherit;
+}
+  
+  textarea {
+
+    resize: none;
+}
+  
+  button,
+  textarea,
+  select {
+    appearance: none !important;
+    border-radius: 0;
+}
+
+/* CSS Reset */
+
+
+
+div {
+    width: 200px;
+    height: 200px;
+    background-color: rgb(193, 131, 185);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+
+}
+
+@media screen and (max-height:200px) and (max-width:200px)
+{
+    div {width: 10px; height:10px;}
+}
+
+
