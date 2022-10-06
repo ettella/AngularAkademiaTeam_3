@@ -9,4 +9,6 @@
       [class.is-invalid]="stickyNote.touched && stickyNote.invalid"
     />
     <p *ngIf="stickyNote.hasError('required')" class="invalid-feedback" id="stickyNote">This filed is required!</p>
+
+    <button class="btn btn-primary"> Submit </button>
   </div>
