@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StickyNotesComponent implements OnInit {
 
+  notes = [''];
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  spush(note: string){
+    this.notes.push(note);
   }
 
 }

@@ -1,14 +1,19 @@
-<div class="form-group" [formGroup]="form" (ngSubmit)="onSubmit()">
+<div class="form-group">
     <label class="mt-2">Add note</label>
     <input
       type="text"
-      formControlName="stickyNote"
       placeholder="type..."
       class="form-control"
       id="stickyNote"
-      [class.is-invalid]="stickyNote.touched && stickyNote.invalid"
+      #stickyNoteInput
+      [(ngModel)]="stickyNote"
     />
-    <p *ngIf="stickyNote.hasError('required')" class="invalid-feedback" id="stickyNote">This filed is required!</p>
-
-    <button class="btn btn-primary"> Submit </button>
+   
+    <button class="btn btn-primary my-3" (click)="submit(stickyNoteInput.value)"> Submit </button>
+  
+  <div *ngFor="let n of notes"> {{ n }} </div>
+  
+  
   </div>
+
+  <!-- [formGroup]="form" formControlName="stickyNote"> -->

@@ -1,1 +1,3 @@
-<p>sticky-notes works!</p>
+<app-form [notes]="notes" (add)="spush($event)">
+    <div *ngFor="let n of notes"></div>
+</app-form>

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AuthService } from './components/week_1/service/auth.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angularAkademiaTeam-3';
+
+  constructor(private authService: AuthService){}
+
+  isSignedIn(){
+    this.authService.isSignedIn();
+  }
 }
