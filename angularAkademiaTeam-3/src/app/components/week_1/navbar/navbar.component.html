@@ -1,0 +1,8 @@
+<div class="container">
+    <ul>
+        <li> <a [routerLink]="['task-1']">1.feladat</a></li>
+        <li> <a [routerLink]="['task-2']">2.feladat</a></li>
+        <li> <a class="btn btn-warning" (click)="signout()" *ngIf="isSignedIn()">Sign out</a></li>
+
+    </ul>
+</div>

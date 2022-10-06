@@ -1,0 +1,29 @@
+ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: #f1f1f1;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+li a {
+  display: block;
+  color: #000;
+  padding: 8px 46px;
+  margin-top: 20px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 24px;
+}
+
+
+
+li a:hover {
+  color: rgb(193, 131, 185);
+  font-weight: 700;
+}
