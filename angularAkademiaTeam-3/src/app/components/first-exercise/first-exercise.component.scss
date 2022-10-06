@@ -1,24 +1,6 @@
-
-    
-.parent {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    text-align: center;
-    }
-
-.child {
+div {
     width: 200px;
     height: 200px;
     background-color: rgb(193, 131, 185);
-    // position: absolute;
-    // top: 50%;
-    // left: 50%;
-    // transform: translate(-50%, -50%);
-}
-
-// @media screen and (max-height:200px) and (max-width:200px)
-// {
-//     div {width: 10px; height:10px;}
-// }
+  
+  }
