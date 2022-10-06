@@ -1,0 +1,12 @@
+<div class="form-group" [formGroup]="form" (ngSubmit)="onSubmit()">
+    <label class="mt-2">Add note</label>
+    <input
+      type="text"
+      formControlName="stickyNote"
+      placeholder="type..."
+      class="form-control"
+      id="stickyNote"
+      [class.is-invalid]="stickyNote.touched && stickyNote.invalid"
+    />
+    <p *ngIf="stickyNote.hasError('required')" class="invalid-feedback" id="stickyNote">This filed is required!</p>
+  </div>
