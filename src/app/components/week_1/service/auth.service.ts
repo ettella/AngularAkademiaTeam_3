@@ -1,16 +1,16 @@
 import { Injectable } from "@angular/core";
 import { Router } from "@angular/router";
 
-const userName = "admin@admin.com"
-const password = "admin"
+const EMAIL = "admin@admin.com"
+const PASSWORD = "admin"
 
 @Injectable({providedIn: 'root'})
 export class AuthService {
 
 
   constructor(private router: Router) {}
-  signin(username: string, pass: string) {
-    if (username == userName && pass == password) {
+  signin(email: string, pass: string) {
+    if (email == EMAIL && pass == PASSWORD) {
       localStorage.setItem("signedin", "true")
     }
   }

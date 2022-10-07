@@ -1,19 +1,19 @@
 <form [formGroup]="signInForm" (ngSubmit)="onSubmit()">
     <div class="form-container">
-  
+
       <div class="form-group">
         <label class="mt-2">Email</label>
         <input
           type="text"
-          formControlName="username"
+          formControlName="email"
           placeholder="Email"
           class="form-control"
-          id="username"
-          [class.is-invalid]="username.touched && username.invalid"
+          id="email"
+          [class.is-invalid]="email.touched && email.invalid"
         />
-        <p *ngIf="username.hasError('required')" class="invalid-feedback" id="username">This filed is required!</p>
+        <p *ngIf="email.hasError('required')" class="invalid-feedback" id="email">This filed is required!</p>
       </div>
-  
+
       <div class="form-group">
         <label class="mt-2">Password</label>
         <input
@@ -29,5 +29,5 @@
         <button type="submit" class="btn btn-primary" >Submit</button>
       </div>
     </div>
-  
+
   </form>

@@ -12,13 +12,13 @@ export class AuthComponent implements OnInit {
   signInForm: FormGroup;
   constructor(private authService: AuthService, private fb: FormBuilder) {
     this.signInForm = fb.group({
-      username: ['', Validators.required], //lowercase and numbers only
+      email: ['', Validators.required], //lowercase and numbers only
       password: ['', Validators.required],
     });
   }
 
-  get username() : FormControl{
-    return this.signInForm.get('username') as FormControl
+  get email() : FormControl{
+    return this.signInForm.get('email') as FormControl
   }
 
   get password() : FormControl{
@@ -29,7 +29,7 @@ export class AuthComponent implements OnInit {
   }
 
   onSubmit() {
-    this.authService.signin(this.signInForm.value["username"], this.signInForm.value["password"])
+    this.authService.signin(this.signInForm.value["email"], this.signInForm.value["password"])
   }
 
 }
