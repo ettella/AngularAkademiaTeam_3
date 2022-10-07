@@ -1,9 +1,16 @@
-<div class="container" *ngIf="isSignedIn()">
-    <ul>
-        <li> <a [routerLink]="['task-1']">1.feladat</a></li>
-        <li> <a [routerLink]="['task-2']">2.feladat</a></li>
-        <li> <a [routerLink]="['sticky']">Sticky note</a></li>
-        <li> <a class="btn btn-warning" (click)="signout()" *ngIf="isSignedIn()">Sign out</a></li>
-
-    </ul>
+<div *ngIf="isSignedIn()">
+  <ul class="nav flex-column">
+    <li class="nav-item">
+      <a [routerLink]="['task-1']">1st exercise</a>
+    </li>
+    <li class="nav-item">
+      <a [routerLink]="['task-2']">2nd exercise</a>
+    </li>
+    <li class="nav-item">
+      <a [routerLink]="['sticky']">Sticky notes</a>
+    </li>
+    <li class="nav-item" (click)="signout()" *ngIf="isSignedIn()">
+      <button class="btn btn-danger ms-3">Sign Out</button>
+    </li>
+  </ul>
 </div>

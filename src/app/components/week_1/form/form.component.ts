@@ -13,18 +13,9 @@ export class FormComponent implements OnInit {
   stickyNote: string = '';
 
 
-  form: FormGroup;
-  constructor(private fb: FormBuilder) {
-    this.form = fb.group({
-      stickyNotes: ['', Validators.required]
-      
-    });
-  }
+  constructor() {
 
-  get stickyNotes() : FormControl{
-    return this.form.get('stickyNote') as FormControl
   }
-
   ngOnInit(): void {
   }
 
