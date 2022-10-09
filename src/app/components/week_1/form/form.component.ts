@@ -11,13 +11,14 @@ export class FormComponent implements OnInit {
   @Output() add = new EventEmitter<string>();
   @Input() notes : string[] =[];
   stickyNote: string = '';
-
-
+  
   constructor() {
+
 
   }
   ngOnInit(): void {
   }
+
 
   submit(stickyNote: string){
     this.add.emit(stickyNote)

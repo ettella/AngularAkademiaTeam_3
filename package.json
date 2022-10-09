@@ -19,6 +19,7 @@
     "@angular/platform-browser-dynamic": "^14.1.0",
     "@angular/router": "^14.1.0",
     "bootstrap": "^5.2.2",
+    "i": "^0.3.7",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
@@ -41,5 +42,13 @@
   "main": "karma.conf.js",
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ettella/AngularAkademiaTeam_3.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ettella/AngularAkademiaTeam_3/issues"
+  },
+  "homepage": "https://github.com/ettella/AngularAkademiaTeam_3#readme"
 }

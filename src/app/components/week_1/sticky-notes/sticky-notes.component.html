@@ -1,3 +1,7 @@
 <app-form [notes]="notes" (add)="spush($event)">
-    <div *ngFor="let n of notes"></div>
+
 </app-form>
+
+<div class="notes-container">
+  <div class="notes" *ngFor="let n of notes">{{ n }}</div>
+</div>
