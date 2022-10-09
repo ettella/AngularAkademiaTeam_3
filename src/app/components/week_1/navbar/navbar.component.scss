@@ -1,29 +1,33 @@
-ul {
-  list-style-type: none;
-  display: flex;
-  flex-direction: column;
-  margin: 0;
-  padding: 0;
-  width: 200px;
-  background-color: #f1f1f1;
-  position: fixed;
+div {
   height: 100%;
-  overflow: auto;
+  background-color: rgb(147, 139, 147);
+
 }
 
 li a {
   display: block;
   color: #000;
-  padding: 8px 46px;
-  margin-top: 20px;
+  padding: 8px 16px;
   text-decoration: none;
-  font-weight: 500;
-  font-size: 24px;
+  text-align: center;
 }
 
+li a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+li a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
 
 
 li a:hover {
   color: rgb(193, 131, 185);
   font-weight: 700;
+}
+
+.nav-item {
+  text-align: center;
 }

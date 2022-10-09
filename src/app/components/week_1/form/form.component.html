@@ -1,19 +1,17 @@
-<div class="form-group">
-    <label class="mt-2">Add note</label>
-    <input
-      type="text"
-      placeholder="type..."
-      class="form-control"
-      id="stickyNote"
-      #stickyNoteInput
-      [(ngModel)]="stickyNote"
-    />
-   
-    <button class="btn btn-primary my-3" (click)="submit(stickyNoteInput.value)"> Submit </button>
-  
-  <div *ngFor="let n of notes"> {{ n }} </div>
-  
-  
-  </div>
+<div >
+  <label class="label mt-2">Add note</label>
+  <input
+    type="text"
+    placeholder="type..."
+    class="form-control"
+    id="stickyNote"
+    #stickyNoteInput
+    [(ngModel)]="stickyNote"
+  />
 
-  <!-- [formGroup]="form" formControlName="stickyNote"> -->
+  <button class="btn btn-primary my-3" (click)="submit(stickyNoteInput.value)">
+    Submit
+  </button>
+
+  <div *ngFor="let n of notes">{{ n }}</div>
+</div>
