@@ -1,16 +1,35 @@
-<div >
-  <label class="label mt-2">Add note</label>
-  <input
-    type="text"
-    placeholder="type..."
-    class="form-control"
-    id="stickyNote"
-    #stickyNoteInput
-    [(ngModel)]="stickyNote"
-  />
-  <button class="btn btn-primary my-3" (click)="submit(stickyNoteInput.value)">
-    Submit
-  </button>
+<div class="row mx-2">
+      <div class="col-6">
+      <label class="label mt-2">Add note</label>
+      <input
+        type="text"
+        placeholder="type..."
+        class="form-control"
+        id="stickyNote"
+        #stickyNoteInput
+        [(ngModel)]="stickyNote"
+      />
+      <button class="btn btn-primary my-3" (click)="submit(stickyNoteInput.value)" [disabled]="stickyNoteInput.value == ''">
+        Submit
+      </button>
+    </div>
 
-  <div *ngFor="let n of notes">{{ n }}</div>
+  <div class="col-6">
+    <div class="row m-4 ">
+      <img src="./../../../../assets/align-center.png" alt="align-center" class="img-fluid " (click)="onSetAlignCenter()" >
+      <img src="./../../../../assets/justify-center.png" alt="justify-center" class="img-fluid"  (click)="setJustifyCenter($event)">
+      <img src="./../../../../assets/align-right.png" alt="align-right" class="img-fluid"  (click)="setAlignRight($event)" >
+      <img src="./../../../../assets/align-left.png" alt="align-left" class="img-fluid" (click)="onSetAlignLeft($event)" >
+    </div>
+  </div>
 </div>
+
+<div id="test" class="flex-container">
+  <div class="flex-box m-3 px-2" *ngFor="let n of notes; let i = index; first as isFirst">
+      {{ n }}
+    <span *ngIf="isFirst" >Notes... </span>
+  </div>
+</div>
+
+
+
