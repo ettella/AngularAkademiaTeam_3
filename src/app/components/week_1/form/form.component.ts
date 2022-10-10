@@ -28,7 +28,11 @@ export class FormComponent implements OnInit {
   }
 
   onSetAlignText(v: string): any{
-    this.aligntextService.alignText = v
+    this.aligntextService.alignTextHor = v
+  }
+
+  onSetAlignTextVert(v: string): any{
+    this.aligntextService.alignTextVert = v
   }
 
 

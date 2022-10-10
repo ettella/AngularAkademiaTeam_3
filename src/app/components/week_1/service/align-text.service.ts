@@ -5,7 +5,8 @@ import { Injectable } from '@angular/core';
 })
 export class AlignTextService {
 
-  alignText: string = 'left'
+  alignTextHor: string = 'left';
+  alignTextVert: string = 'top';
 
   constructor() { }
 }
