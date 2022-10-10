@@ -6,7 +6,7 @@ import { AfterViewInit, Component, ElementRef, EventEmitter, Input, OnInit, Outp
   templateUrl: './form.component.html',
   styleUrls: ['./form.component.scss']
 })
-export class FormComponent implements OnInit, AfterViewInit {
+export class FormComponent implements OnInit {
 
   @Output() add = new EventEmitter<string>();
   @Input() notes : string[] =[];
