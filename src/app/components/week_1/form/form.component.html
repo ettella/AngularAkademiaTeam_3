@@ -17,17 +17,13 @@
 
   <div class="col-6">
     <div class="row m-4 ">
-      <img src="./../../../../assets/align-center.png" alt="align-center" class="img-fluid " (click)="onSetAlignCenter()" >
-      <img src="./../../../../assets/justify-center.png" alt="justify-center" class="img-fluid">
-      <img src="./../../../../assets/align-right.png" alt="align-right" class="img-fluid"   >
-      <img src="./../../../../assets/align-left.png" alt="align-left" class="img-fluid"  >
+      <img src="./../../../../assets/align-center.png" alt="align-center" class="img-fluid " (click)="onSetAlignText('center')">
+      <img src="./../../../../assets/justify-center.png" alt="justify-center" class="img-fluid" (click)="onSetAlignText('justify')">
+      <img src="./../../../../assets/align-right.png" alt="align-right" class="img-fluid" (click)="onSetAlignText('right')">
+      <img src="./../../../../assets/align-left.png" alt="align-left" class="img-fluid" (click)="onSetAlignText('left')">
     </div>
   </div>
 
-<div id="test" >
-  <div class="m-3 px-2" *ngFor="let n of notes; let i = index">
-  </div>
-</div>
 
 
 

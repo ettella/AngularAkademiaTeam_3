@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AlignTextService } from '../service/align-text.service';
 
 @Component({
   selector: 'app-sticky-notes',
@@ -9,7 +10,7 @@ export class StickyNotesComponent implements OnInit {
 
   notes = [''];
 
-  constructor() { }
+  constructor(public alignTextService: AlignTextService) { }
 
   ngOnInit(): void {
   }

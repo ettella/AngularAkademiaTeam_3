@@ -1,5 +1,6 @@
 import { FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms';
 import { AfterViewInit, Component, ElementRef, EventEmitter, Input, OnInit, Output, Renderer2, ViewChild } from '@angular/core';
+import { AlignTextService } from '../service/align-text.service';
 
 @Component({
   selector: 'app-form',
@@ -12,8 +13,8 @@ export class FormComponent implements OnInit {
   @Input() notes : string[] =[];
   stickyNote: string = '';
 
-  
-  constructor() {
+
+  constructor(private aligntextService: AlignTextService) {
 
   }
 
@@ -23,16 +24,11 @@ export class FormComponent implements OnInit {
 
   submit(stickyNote: string){
     this.add.emit(stickyNote);
-    
+
   }
 
-  onSetAlignCenter(): any{
-    // const divNotes: HTMLDivElement = <HTMLDivElement>event.target
-    // console.log(divNotes.style.alignContent)
-    // if(divNotes.style.alignContent = this.setAlignLeft){
-    //   return divNotes.style.alignContent = this.setAlignCenter
-    // }
-    // this.renderer.setStyle(this.test.nativeElement, 'color', 'white');
+  onSetAlignText(v: string): any{
+    this.aligntextService.alignText = v
   }
 
 
