@@ -4,7 +4,6 @@ import { RouterModule, Routes } from '@angular/router';
 import { SecondExerciseComponent } from './components/week_1/second-exercise/second-exercise.component';
 import { AuthComponent } from './components/week_1/auth/auth.component';
 import { AuthGuard } from './components/week_1/service/authguard.service';
-import { FormComponent } from './components/week_1/form/form.component';
 import { StickyNotesContainerComponent } from './components/week_1/sticky-notes-container/sticky-notes-container.component';
 
 

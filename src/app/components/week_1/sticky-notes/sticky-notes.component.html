@@ -5,6 +5,5 @@
 <div class="notes-container">
   <div [ngStyle]="{'text-align' : alignTextService.alignTextHor, 'align-items' : alignTextService.alignTextVert}" class="notes"  *ngFor="let n of notes; first as isFirst">
     {{ n }}
-    <span *ngIf="isFirst" >Notes... </span>
   </div>
 </div>

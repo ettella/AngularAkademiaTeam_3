@@ -8,11 +8,12 @@ import { AlignTextService } from '../service/align-text.service';
 })
 export class StickyNotesComponent implements OnInit {
 
-  notes = [''];
+  notes: string[] = [];
 
   constructor(public alignTextService: AlignTextService) { }
 
   ngOnInit(): void {
+    console.log(this.notes.length)
   }
 
   spush(note: string){
