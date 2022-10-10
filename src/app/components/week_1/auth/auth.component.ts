@@ -12,7 +12,7 @@ export class AuthComponent implements OnInit {
   signInForm: FormGroup;
   constructor(private authService: AuthService, private fb: FormBuilder) {
     this.signInForm = fb.group({
-      email: ['', Validators.required], //lowercase and numbers only
+      email: ['', Validators.required],
       password: ['', Validators.required],
     });
   }
