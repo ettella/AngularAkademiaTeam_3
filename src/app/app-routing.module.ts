@@ -13,6 +13,7 @@ const routes: Routes = [
   {path: 'task-1', component: FirstExerciseComponent,  canActivate:[AuthGuard]},
   {path: 'task-2', component: SecondExerciseComponent, canActivate:[AuthGuard]},
   {path: 'sticky', component: StickyNotesContainerComponent, canActivate:[AuthGuard]},
+  // {path: '', component: FormComponent, canActivate:[AuthGuard]},
 ];
 
 @NgModule({

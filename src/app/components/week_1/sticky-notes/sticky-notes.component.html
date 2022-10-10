@@ -3,5 +3,8 @@
 </app-form>
 
 <div class="notes-container">
-  <div class="notes" *ngFor="let n of notes">{{ n }}</div>
+  <div class="notes"  *ngFor="let n of notes; first as isFirst">
+    {{ n }}
+    <span *ngIf="isFirst" >Notes... </span>
+  </div>
 </div>
