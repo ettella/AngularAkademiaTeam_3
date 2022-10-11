@@ -1,80 +1,152 @@
-
-<div class="row mx-2" [formGroup]="form">
-      <div class="col-6">
+<div class="container-form">
+  <div class="row mx-2" [formGroup]="form">
+    <div class="col-6">
       <label class="label mt-2">Add note</label>
       <input
         type="text"
         placeholder="type..."
         class="form-control"
         id="text"
-       formControlName="text"
-
+        formControlName="text"
       />
-      <button class="btn btn-primary my-3" (click)="addNote()">
-        Add
-      </button>
+      <button class="btn btn-primary my-3" (click)="addNote()">Add</button>
       <button class="btn btn-danger my-3 mx-2" (click)="deleteAll()">
         Delete all
       </button>
     </div>
+  </div>
 
-  <div class="col-6">
-    <div class="row m-4 ">
-      <img src="./../../../../assets/align-center.png" alt="align-center" class="img-fluid " (click)="onSetAlignText('center')">
-      <img src="./../../../../assets/justify-center.png" alt="justify-center" class="img-fluid" (click)="onSetAlignText('justify')">
-      <img src="./../../../../assets/align-right.png" alt="align-right" class="img-fluid" (click)="onSetAlignText('right')">
-      <img src="./../../../../assets/align-left.png" alt="align-left" class="img-fluid" (click)="onSetAlignText('left')">
+  <div class="col-6 align">
+    <p>Align Notes Horizontally</p>
+    <div class="btn-group" data-toggle="buttons">
+      <label class="btn btn-primary">
+        <input
+          type="radio"
+          name="options"
+          id="option1"
+          (click)="onSetAlignText('flex-start')"
+        />
+        <img
+          src="./../../../../assets/align-left.png"
+          alt="align-left"
+          class="img-fluid"
+        />
+      </label>
+      <label class="btn btn-primary">
+        <input
+          type="radio"
+          name="options"
+          id="option2"
+          (click)="onSetAlignText('flex-end')"
+        />
+        <img
+          src="./../../../../assets/align-right.png"
+          alt="align-right"
+          class="img-fluid"
+        />
+      </label>
+      <label class="btn btn-primary">
+        <input
+          type="radio"
+          name="options"
+          id="option3"
+          (click)="onSetAlignText('center')"
+        />
+        <img
+          src="./../../../../assets/align-center.png"
+          alt="align-center"
+          class="img-fluid"
+        />
+      </label>
+      <label class="btn btn-primary">
+        <input
+          type="radio"
+          name="options"
+          id="option4"
+          (click)="onSetAlignText('space-between')"
+        />
+        <img
+          src="./../../../../assets/justify-center.png"
+          alt="align-justify"
+          class="img-fluid"
+        />
+      </label>
     </div>
   </div>
-
-  <div class="notes-container">
-  
-  <div [ngStyle]="{'text-align' : alignTextService.alignText}" *ngFor="let n of editStickysService.notes">
-      
-        <div class="iconbox"> 
-          <div class="col-1 icon" [routerLink]="['/', 'edit-note', n.id]" > ✏️</div>
-          <div class="col-1 icon" (click)="deleteNotes(n)">❌</div>
-        </div>
-  
-       <div class="notes" >
-        {{ n.text }}
-       </div>
-      
+  <div class="col-6 align">
+    <p>Align Notes Vertically</p>
+    <div class="btn-group" data-toggle="buttons">
+      <label class="btn btn-primary">
+        <input
+          type="radio"
+          name="optionsa"
+          id="option1a"
+          (click)="onSetAlignTextVert('flex-start')"
+        />
+        <img
+          src="./../../../../assets/align-left.png"
+          alt="align-left"
+          class="img-fluid"
+        />
+      </label>
+      <label class="btn btn-primary">
+        <input
+          type="radio"
+          name="optionsa"
+          id="option2a"
+          (click)="onSetAlignTextVert('flex-end')"
+        />
+        <img
+          src="./../../../../assets/align-right.png"
+          alt="align-right"
+          class="img-fluid"
+        />
+      </label>
+      <label class="btn btn-primary">
+        <input
+          type="radio"
+          name="optionsa"
+          id="option3a"
+          (click)="onSetAlignTextVert('center')"
+        />
+        <img
+          src="./../../../../assets/align-center.png"
+          alt="align-center"
+          class="img-fluid"
+        />
+      </label>
+      <label class="btn btn-primary">
+        <input
+          type="radio"
+          name="optionsa"
+          id="option4a"
+          (click)="onSetAlignTextVert('space-between')"
+        />
+        <img
+          src="./../../../../assets/justify-center.png"
+          alt="align-justify"
+          class="img-fluid"
+        />
+      </label>
+    </div>
   </div>
-  </div> 
-
-
-
-
-<!--   
-<div class="row mx-2">
-  <div class="col-6">
-  <label class="label mt-2">Add note</label>
-  <input
-    type="text"
-    placeholder="type..."
-    class="form-control"
-    id="stickyNote"
-    #stickyFormInput
-
-  />
-  <button class="btn btn-primary my-3" (click)="submit(stickyFormInput.value)">
-    Submit
-  </button>
-  <button class="btn btn-danger my-3 mx-2" (click)="deleteAll()">
-    Delete all
-  </button>
 </div>
+<!--gyere vissza ide, ha szarul működik!-->
+<div class="notes-container">
+  <div
+    [ngStyle]="{
+      'justify-content': alignTextService.alignTextHor,
+      'align-content': alignTextService.alignTextVert
+    }"
+    *ngFor="let n of editStickysService.notes"
+  >
+    <div class="iconbox">
+      <div class="col-1 icon" [routerLink]="['/', 'edit-note', n.id]">✏️</div>
+      <div class="col-1 icon" (click)="deleteNotes(n)">❌</div>
+    </div>
 
-<div class="col-6">
-<div class="row m-4 ">
-  <img src="./../../../../assets/align-center.png" alt="align-center" class="img-fluid " (click)="onSetAlignText('center')">
-  <img src="./../../../../assets/justify-center.png" alt="justify-center" class="img-fluid" (click)="onSetAlignText('justify')">
-  <img src="./../../../../assets/align-right.png" alt="align-right" class="img-fluid" (click)="onSetAlignText('right')">
-  <img src="./../../../../assets/align-left.png" alt="align-left" class="img-fluid" (click)="onSetAlignText('left')">
+    <div class="notes">
+      {{ n.text }}
+    </div>
+  </div>
 </div>
-</div>
-
-
-
- -->

@@ -12,6 +12,9 @@ import { StickyNotesContainerComponent } from './components/week_1/sticky-notes-
 import { StickyNotesComponent } from './components/week_1/sticky-notes/sticky-notes.component';
 import { FormComponent } from './components/week_1/form/form.component';
 import { EditStickysComponent } from './components/week_1/edit-stickys/edit-stickys.component';
+import { AccordionComponent } from './components/week_1/accordion/accordion.component';
+
+
 
 @NgModule({
   declarations: [
@@ -22,6 +25,7 @@ import { EditStickysComponent } from './components/week_1/edit-stickys/edit-stic
     AuthComponent,
     StickyNotesContainerComponent,
     StickyNotesComponent,
+    AccordionComponent,
     FormComponent,
     EditStickysComponent
   ],

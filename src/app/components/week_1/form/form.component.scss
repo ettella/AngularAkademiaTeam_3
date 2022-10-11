@@ -2,10 +2,9 @@
   width: auto;
 }
 
-
 img {
   cursor:pointer;
-  width:50px;
+  width:35px;
 }
 
 .notes-container {
@@ -14,7 +13,7 @@ img {
   align-items: flex-start;
   flex-wrap: wrap;
   hyphens: auto;
-  
+
 }
 
 .notes {
@@ -29,10 +28,8 @@ img {
   word-wrap: break-word;
   display: flex;
   hyphens: auto;
-  
+
 }
-
-
 
 .iconbox {
   width: 200px;
@@ -47,7 +44,56 @@ img {
 }
 
 .icon{
-  cursor: pointer; 
+  cursor: pointer;
   margin:10px;
 
+.container-form {
+  display: flex;
+  width: 220px;
+}
+
+.col-6 {
+  width: 400px;
+  margin: 10px;
+}
+
+.align {
+  width: 220px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 15px;
+}
+
+
+.row m-4 {
+  margin: 2px;
+  flex-wrap: nowrap;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.btn-group{
+  margin: 0;
+  width: 200px;
+}
+
+.btn-primary {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: #b78bd1;
+  --bs-btn-border-color: #a57dbd;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #8f6ba3;
+  --bs-btn-hover-border-color: #ca97e5;
+  --bs-btn-focus-shadow-rgb: 49,132,253;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #e7aa59;
+  --bs-btn-active-border-color: #e9cba5;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: #fff;
+  --bs-btn-disabled-bg: #e7aa59;
+  --bs-btn-disabled-border-color: #e9cba5;
+}
 }
