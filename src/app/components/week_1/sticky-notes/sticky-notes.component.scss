@@ -14,5 +14,18 @@
   box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.2);
   font-weight: 500;
   background: linear-gradient(215deg, rgba(231,176,137,1) 11%, rgba(210,173,255,1) 100%);
+  overflow: hidden;
+  flex-wrap: wrap;
+  display:inline
 
+}
+
+
+.field {
+  width: 180px;
+  height: 180px;
+}
+
+.field-box {
+  display:block;
 }

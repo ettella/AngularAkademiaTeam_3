@@ -7,11 +7,14 @@
         placeholder="type..."
         class="form-control"
         id="stickyNote"
-        #stickyNoteInput
-        [(ngModel)]="stickyNote"
+        #stickyFormInput
+
       />
-      <button class="btn btn-primary my-3" (click)="submit(stickyNoteInput.value)" [disabled]="stickyNoteInput.value == ''">
+      <button class="btn btn-primary my-3" (click)="submit(stickyFormInput.value)">
         Submit
+      </button>
+      <button class="btn btn-danger my-3 mx-2" (click)="deleteAll()">
+        Delete all
       </button>
     </div>
 

@@ -1,10 +1,17 @@
-<app-form [notes]="notes" (add)="spush($event)">
-
+<app-form (add)="spush($event)" (deletePosts)="deleteAll()">
 </app-form>
 
 <div class="notes-container">
-  <div [ngStyle]="{'text-align' : alignTextService.alignText}" class="notes"  *ngFor="let n of notes; first as isFirst">
+  <div *ngIf="notes.length === 0" class="text-secondary mx-4">No notes yet...</div>
+  <div [ngStyle]="{'text-align' : alignTextService.alignText}" class="notes"  *ngFor="let n of notes; let i = index; first as isFirst">
     {{ n }}
-    <span *ngIf="isFirst" >Notes... </span>
+    <div class="field">
+      <span  class="col-8" *ngIf="isFirst" >Example note... </span>
+      <div class="field-box">
+        <div class="col-1" style="cursor: pointer; display:block"> ✏️</div>
+        <div class="col-1" style="cursor: pointer; display:block" (click)="deleteNotes(i)">❌</div>
+      </div>
+    </div>
   </div>
 </div>
+<!-- [notes]="stickyNotes"  -->

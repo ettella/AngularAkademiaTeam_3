@@ -1,3 +1,4 @@
+import { Notes } from './../models/notes-model';
 import { FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms';
 import { AfterViewInit, Component, ElementRef, EventEmitter, Input, OnInit, Output, Renderer2, ViewChild } from '@angular/core';
 import { AlignTextService } from '../service/align-text.service';
@@ -10,8 +11,9 @@ import { AlignTextService } from '../service/align-text.service';
 export class FormComponent implements OnInit {
 
   @Output() add = new EventEmitter<string>();
-  @Input() notes : string[] =[];
-  stickyNote: string = '';
+  @Output() deletePosts = new EventEmitter<string[]>();
+  @Input() notes : string[] = []
+  // stickyNote: Notes;
 
 
   constructor(private aligntextService: AlignTextService) {
@@ -30,6 +32,11 @@ export class FormComponent implements OnInit {
   onSetAlignText(v: string): any{
     this.aligntextService.alignText = v
   }
+
+  deleteAll(){
+    this.deletePosts.emit(this.notes)
+  }
+
 
 
 
