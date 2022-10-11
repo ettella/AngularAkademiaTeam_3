@@ -48,6 +48,7 @@ img {
 .icon{
   cursor: pointer;
   margin:10px;
+}
 
 .container-form {
   display: flex;
@@ -82,8 +83,8 @@ p {
   width: 200px;
 }
 
-.btn-primary {
-  --bs-btn-color: #fff;
+label.btn.btn-primary {
+  --bs-btn-color: #fff !important;
   --bs-btn-bg: #b78bd1;
   --bs-btn-border-color: #a57dbd;
   --bs-btn-hover-color: #fff;
@@ -97,5 +98,4 @@ p {
   --bs-btn-disabled-color: #fff;
   --bs-btn-disabled-bg: #e7aa59;
   --bs-btn-disabled-border-color: #e9cba5;
-}
 }
