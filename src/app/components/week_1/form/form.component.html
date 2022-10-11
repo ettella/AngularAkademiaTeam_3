@@ -1,6 +1,6 @@
-
-<div class="row mx-2">
-      <div class="col-6">
+<div class="container-form">
+  <div class="row mx-2">
+    <div class="col-6">
       <label class="label mt-2">Add note</label>
       <input
         type="text"
@@ -14,24 +14,47 @@
         Submit
       </button>
     </div>
-
-  <div class="col-6">
-    <div class="row m-4 ">
-      <p class="col-12">Align Notes</p>
-    </div>
-    <div class="row m-4 ">
-      <img src="./../../../../assets/align-center.png" alt="align-center" class="img-fluid " (click)="onSetAlignText('start')">
-      <img src="./../../../../assets/justify-center.png" alt="justify-center" class="img-fluid" (click)="onSetAlignText('center')">
-      <img src="./../../../../assets/align-right.png" alt="align-right" class="img-fluid" (click)="onSetAlignText('end')">
-    </div>
-    <div class="row m-4 ">
-      <img src="./../../../../assets/align-center.png" alt="align-center" class="img-fluid " (click)="onSetAlignTextVert('start')">
-      <img src="./../../../../assets/justify-center.png" alt="justify-center" class="img-fluid" (click)="onSetAlignTextVert('center')">
-      <img src="./../../../../assets/align-right.png" alt="align-right" class="img-fluid" (click)="onSetAlignTextVert('end')">
-      <img src="./../../../../assets/align-left.png" alt="align-left" class="img-fluid" (click)="onSetAlignTextVert('space-between')">
-    </div>
   </div>
-
-
-
-
+    <div class="col-6 align">
+      <p>Align Notes Horizontally</p>
+      <div class="btn-group" data-toggle="buttons">
+        <label class="btn btn-primary">
+          <input type="radio" name="options" id="option1" (click)="onSetAlignText('left')">
+          <img src="./../../../../assets/align-left.png" alt="align-left" class="img-fluid">
+        </label>
+        <label class="btn btn-primary">
+          <input type="radio" name="options" id="option2" (click)="onSetAlignText('right')">
+          <img src="./../../../../assets/align-right.png" alt="align-right" class="img-fluid">
+        </label>
+        <label class="btn btn-primary">
+          <input type="radio" name="options" id="option3" (click)="onSetAlignText('center')">
+          <img src="./../../../../assets/align-center.png" alt="align-center" class="img-fluid">
+        </label>
+        <label class="btn btn-primary">
+          <input type="radio" name="options" id="option4" (click)="onSetAlignText('justify')">
+          <img src="./../../../../assets/justify-center.png" alt="align-justify" class="img-fluid">
+        </label>
+      </div>
+    </div>
+    <div class="col-6 align">
+      <p>Align Notes Vertically</p>
+      <div class="btn-group" data-toggle="buttons">
+        <label class="btn btn-primary">
+          <input  type="radio" name="optionsa" id="option1a" (click)="onSetAlignTextVert('flex-start')">
+          <img src="./../../../../assets/align-left.png" alt="align-left" class="img-fluid">
+        </label>
+        <label class="btn btn-primary">
+          <input  type="radio" name="optionsa" id="option2a" (click)="onSetAlignTextVert('flex-end')">
+          <img src="./../../../../assets/align-right.png" alt="align-right" class="img-fluid">
+        </label>
+        <label class="btn btn-primary">
+          <input  type="radio" name="optionsa" id="option3a" (click)="onSetAlignTextVert('center')">
+          <img src="./../../../../assets/align-center.png" alt="align-center" class="img-fluid">
+        </label>
+        <label class="btn btn-primary">
+          <input  type="radio" name="optionsa" id="option4a" (click)="onSetAlignTextVert('baseline')">
+          <img src="./../../../../assets/justify-center.png" alt="align-justify" class="img-fluid">
+        </label>
+      </div>
+    </div>
+</div>
