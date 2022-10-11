@@ -3,7 +3,7 @@
 </app-form>
 <!-- align content: start,center,end -->
 <!-- justify-content: start,center,end (space-between)-->
-<div class="notes-container" [ngStyle]="{'align-content' : alignTextService.alignTextHor, 'justify-content': alignTextService.alignTextVert}">
+<div class="notes-container" [ngStyle]="{'justify-content' : alignTextService.alignTextHor, 'align-content': alignTextService.alignTextVert}">
   <div class="notes" *ngFor="let n of notes">
     {{ n }}
   </div>

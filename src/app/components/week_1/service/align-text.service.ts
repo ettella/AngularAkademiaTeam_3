@@ -5,8 +5,8 @@ import { Injectable } from '@angular/core';
 })
 export class AlignTextService {
 
+  alignTextVert: string = 'flex-start';
   alignTextHor: string = 'start';
-  alignTextVert: string = 'start';
 
   constructor() { }
 }
