@@ -11,7 +11,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { StickyNotesContainerComponent } from './components/week_1/sticky-notes-container/sticky-notes-container.component';
 import { StickyNotesComponent } from './components/week_1/sticky-notes/sticky-notes.component';
 import { FormComponent } from './components/week_1/form/form.component';
+import { EditStickysComponent } from './components/week_1/edit-stickys/edit-stickys.component';
 import { AccordionComponent } from './components/week_1/accordion/accordion.component';
+
+
 
 @NgModule({
   declarations: [
@@ -22,8 +25,9 @@ import { AccordionComponent } from './components/week_1/accordion/accordion.comp
     AuthComponent,
     StickyNotesContainerComponent,
     StickyNotesComponent,
+    AccordionComponent,
     FormComponent,
-    AccordionComponent
+    EditStickysComponent
   ],
   imports: [
     BrowserModule,
