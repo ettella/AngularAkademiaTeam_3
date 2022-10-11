@@ -1,15 +1,13 @@
-<app-form (add)="spush($event)" (deletePosts)="deleteAll()">
+<!-- <app-form (add)="spush($event)" (deletePosts)="deleteAll()">
 </app-form>
 
 <div class="notes-container">
   <div *ngIf="notes.length === 0" class="text-secondary mx-4">No notes yet...</div>
 
-
-
 <div [ngStyle]="{'text-align' : alignTextService.alignText}" *ngFor="let n of notes; let i = index; first as isFirst">
     
       <div class="iconbox"> 
-        <div class="col-1 icon" > ✏️</div>
+        <div class="col-1 icon" [routerLink]="['/', 'edit-sticky', notes.id]" > ✏️</div>
         <div class="col-1 icon" (click)="deleteNotes(i)">❌</div>
       </div>
 
@@ -18,4 +16,6 @@
      </div>
     
 </div>
-</div>
+</div> -->
+
+<app-form></app-form>

@@ -1,17 +1,17 @@
 
-<div class="row mx-2">
+<div class="row mx-2" [formGroup]="form">
       <div class="col-6">
       <label class="label mt-2">Add note</label>
       <input
         type="text"
         placeholder="type..."
         class="form-control"
-        id="stickyNote"
-        #stickyFormInput
+        id="text"
+       formControlName="text"
 
       />
-      <button class="btn btn-primary my-3" (click)="submit(stickyFormInput.value)">
-        Submit
+      <button class="btn btn-primary my-3" (click)="addNote()">
+        Add
       </button>
       <button class="btn btn-danger my-3 mx-2" (click)="deleteAll()">
         Delete all
@@ -27,6 +27,54 @@
     </div>
   </div>
 
+  <div class="notes-container">
+  
+  <div [ngStyle]="{'text-align' : alignTextService.alignText}" *ngFor="let n of editStickysService.notes">
+      
+        <div class="iconbox"> 
+          <div class="col-1 icon" [routerLink]="['/', 'edit-note', n.id]" > ✏️</div>
+          <div class="col-1 icon" (click)="deleteNotes(n)">❌</div>
+        </div>
+  
+       <div class="notes" >
+        {{ n.text }}
+       </div>
+      
+  </div>
+  </div> 
 
 
 
+
+<!--   
+<div class="row mx-2">
+  <div class="col-6">
+  <label class="label mt-2">Add note</label>
+  <input
+    type="text"
+    placeholder="type..."
+    class="form-control"
+    id="stickyNote"
+    #stickyFormInput
+
+  />
+  <button class="btn btn-primary my-3" (click)="submit(stickyFormInput.value)">
+    Submit
+  </button>
+  <button class="btn btn-danger my-3 mx-2" (click)="deleteAll()">
+    Delete all
+  </button>
+</div>
+
+<div class="col-6">
+<div class="row m-4 ">
+  <img src="./../../../../assets/align-center.png" alt="align-center" class="img-fluid " (click)="onSetAlignText('center')">
+  <img src="./../../../../assets/justify-center.png" alt="justify-center" class="img-fluid" (click)="onSetAlignText('justify')">
+  <img src="./../../../../assets/align-right.png" alt="align-right" class="img-fluid" (click)="onSetAlignText('right')">
+  <img src="./../../../../assets/align-left.png" alt="align-left" class="img-fluid" (click)="onSetAlignText('left')">
+</div>
+</div>
+
+
+
+ -->
