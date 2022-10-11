@@ -3,7 +3,7 @@
 </app-form>
 
 <div class="notes-container">
-  <div [ngStyle]="{'text-align' : alignTextService.alignTextHor, 'align-items' : alignTextService.alignTextVert}" class="notes"  *ngFor="let n of notes; first as isFirst">
+  <div [ngStyle]="{'text-align' : alignTextService.alignTextHor, 'align-items' : alignTextService.alignTextVert}" class="notes"  *ngFor="let n of notes">
     {{ n }}
   </div>
 </div>

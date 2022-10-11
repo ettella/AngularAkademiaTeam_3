@@ -1,0 +1,16 @@
+
+button, .accordion-body {
+  background-color: rgb(147, 139, 147) !important;
+  text-align: center;
+  display: block;
+}
+
+.accordion-button:after {
+  background-image: none;
+}
+
+.accordion-button:focus {
+  color: black;
+  box-shadow: none;
+  border: none;
+}

@@ -5,6 +5,7 @@ import { SecondExerciseComponent } from './components/week_1/second-exercise/sec
 import { AuthComponent } from './components/week_1/auth/auth.component';
 import { AuthGuard } from './components/week_1/service/authguard.service';
 import { StickyNotesContainerComponent } from './components/week_1/sticky-notes-container/sticky-notes-container.component';
+import { AccordionComponent } from './components/week_1/accordion/accordion.component';
 
 
 const routes: Routes = [
