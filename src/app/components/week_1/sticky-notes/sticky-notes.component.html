@@ -3,14 +3,42 @@
 
 <div class="notes-container">
   <div *ngIf="notes.length === 0" class="text-secondary mx-4">No notes yet...</div>
-  <div [ngStyle]="{'text-align' : alignTextService.alignText}" class="notes"  *ngFor="let n of notes; let i = index; first as isFirst">
-    {{ n }}
-    <div class="field">
-      <span  class="col-8" *ngIf="isFirst" >Example note... </span>
-      <div class="field-box">
-        <div class="col-1" style="cursor: pointer; display:block"> ✏️</div>
-        <div class="col-1" style="cursor: pointer; display:block" (click)="deleteNotes(i)">❌</div>
+
+
+
+<div [ngStyle]="{'text-align' : alignTextService.alignText}" *ngFor="let n of notes; let i = index; first as isFirst">
+    
+      <div class="field-box"> 
+        <div class="col-1 icon" > ✏️</div>
+        <div class="col-1 icon" (click)="deleteNotes(i)">❌</div>
       </div>
-    </div>
-  </div>
+
+     <div class="notes" >
+      {{ n }}
+     </div>
+    
 </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<!-- older version: -->
+
+  <!-- <div [ngStyle]="{'text-align' : alignTextService.alignText}" class="notes"  *ngFor="let n of notes; let i = index; first as isFirst">
+    {{ n }}
+    <div class="field"> -->
+      <!-- <span  class="col-8" *ngIf="isFirst" >Example note... </span> -->
+      <!-- <div class="field-box"> -->
+        <!-- <div class="col-1 icon" > ✏️</div>
+        <div class="col-1 icon" (click)="deleteNotes(i)">❌</div> -->
+      <!-- </div> -->
+    <!-- </div>
+  </div>
+</div> -->
