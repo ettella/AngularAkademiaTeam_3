@@ -10,9 +10,11 @@ img {
 .notes-container {
   margin: 0 auto;
   display: flex;
-  align-items: flex-start;
+  align-content: start;
+  justify-content: start;
   flex-wrap: wrap;
   hyphens: auto;
+  height: 100%;
 
 }
 

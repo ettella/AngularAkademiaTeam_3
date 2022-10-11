@@ -24,7 +24,7 @@
           type="radio"
           name="options"
           id="option1"
-          (click)="onSetAlignText('flex-start')"
+          (click)="onSetAlignText('start')"
         />
         <img
           src="./../../../../assets/align-left.png"
@@ -37,7 +37,7 @@
           type="radio"
           name="options"
           id="option2"
-          (click)="onSetAlignText('flex-end')"
+          (click)="onSetAlignText('center')"
         />
         <img
           src="./../../../../assets/align-right.png"
@@ -50,7 +50,7 @@
           type="radio"
           name="options"
           id="option3"
-          (click)="onSetAlignText('center')"
+          (click)="onSetAlignText('end')"
         />
         <img
           src="./../../../../assets/align-center.png"
@@ -81,7 +81,7 @@
           type="radio"
           name="optionsa"
           id="option1a"
-          (click)="onSetAlignTextVert('flex-start')"
+          (click)="onSetAlignTextVert('start')"
         />
         <img
           src="./../../../../assets/align-left.png"
@@ -94,7 +94,7 @@
           type="radio"
           name="optionsa"
           id="option2a"
-          (click)="onSetAlignTextVert('flex-end')"
+          (click)="onSetAlignTextVert('center')"
         />
         <img
           src="./../../../../assets/align-right.png"
@@ -107,7 +107,7 @@
           type="radio"
           name="optionsa"
           id="option3a"
-          (click)="onSetAlignTextVert('center')"
+          (click)="onSetAlignTextVert('end')"
         />
         <img
           src="./../../../../assets/align-center.png"
@@ -132,12 +132,12 @@
   </div>
 </div>
 <!--gyere vissza ide, ha szarul működik!-->
-<div class="notes-container">
+<div class="notes-container" [ngStyle]="{
+  'justify-content': alignTextService.alignTextHor,
+  'align-content': alignTextService.alignTextVert
+}">
   <div
-    [ngStyle]="{
-      'justify-content': alignTextService.alignTextHor,
-      'align-content': alignTextService.alignTextVert
-    }"
+
     *ngFor="let n of editStickysService.notes"
   >
     <div class="iconbox">
