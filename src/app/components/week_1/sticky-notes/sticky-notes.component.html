@@ -8,7 +8,7 @@
 
 <div [ngStyle]="{'text-align' : alignTextService.alignText}" *ngFor="let n of notes; let i = index; first as isFirst">
     
-      <div class="field-box"> 
+      <div class="iconbox"> 
         <div class="col-1 icon" > ✏️</div>
         <div class="col-1 icon" (click)="deleteNotes(i)">❌</div>
       </div>
