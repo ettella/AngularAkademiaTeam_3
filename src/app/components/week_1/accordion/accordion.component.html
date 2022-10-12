@@ -1,37 +1,9 @@
-<!-- <div class="accordion accordion-flush" id="accordionExample">
-  <div class="accordion-item">
-    <h2 class="accordion-header" [id]="'heading' + id">
-      <button
-        class="accordion-button collapsed"
-        type="button"
-        data-bs-toggle="collapse"
-        [attr.data-bs-target]="'#collapse' + id"
-        aria-expanded="false"
-        [attr.aria-controls]="'collapse' + id"
-      >
-        Accordion
-      </button>
-    </h2>
-    <div
-      [id]="'collapse' + id"
-      class="accordion-collapse collapse"
-      [attr.aria-labelledby]="'heading'+id"
-      data-bs-parent="#accordionExample"
-    >
-      <div class="accordion-body">
-        Example, example, example, example, example, example, example, example,
-        example, example, example, example, example, example, example, example,
-        example, example, example, example, example, example, example, example.
-      </div>
-    </div>
-  </div>
-</div> -->
 
-<div class="row">
-  <div class="col-xs-12">
+<div class="row accordionbox my-5">
+  <div class="col-8">
     <ul class="list-group">
       <li
-        class="list-group-item list-group-item-info trans"
+        class="p-2 list-group-item list-group-item-info trans"
         *ngFor="let accdata of accordion; let i = index"
         >
         <div (click)="onCollapseAccordion(accordionOpened)" style="cursor: pointer">{{ accdata.title }}</div>

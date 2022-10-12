@@ -16,7 +16,6 @@ export class Data {
   styleUrls: ['./accordion.component.scss']
 })
 export class AccordionComponent implements OnInit {
-  // @Input() id!: number;
 
   accordion: Data[];
 
