@@ -1,9 +1,11 @@
 
 import { ActivatedRoute } from '@angular/router';
-import { Notes } from './../models/notes-model';
+import { Notes } from '../../../models/notes-model';
 import {
   FormGroup,
   FormBuilder,
+  FormControl,
+  Validators,
 } from '@angular/forms';
 import {
   Component,
@@ -31,9 +33,13 @@ export class FormComponent implements OnInit {
     public activatedRoute: ActivatedRoute,
   ) {
     this.form = fb.group({
-      text: [''],
+      text: ['', Validators.required],
     });
     this.currentId = activatedRoute.snapshot.params['id'];
+  }
+
+  get text(): FormControl{
+    return this.form.get('text') as FormControl
   }
 
   ngOnInit(): void {
