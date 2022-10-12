@@ -10,13 +10,14 @@
       <a [routerLink]="['sticky']">Sticky notes</a>
     </li>
     <li class="nav-item">
-      <app-accordion [id]="1"></app-accordion>
+      <app-accordion ></app-accordion>
     </li>
-    <li class="nav-item">
+    <!-- <li class="nav-item">
       <app-accordion [id]="2"></app-accordion>
-    </li>
+    </li> -->
     <li class="nav-item" (click)="signout()" *ngIf="isSignedIn()">
       <button class="btn btn-danger ms-3">Sign Out</button>
     </li>
   </ul>
 </div>
+<!-- [id]="1" -->

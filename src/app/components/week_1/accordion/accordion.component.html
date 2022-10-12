@@ -1,4 +1,4 @@
-<div class="accordion accordion-flush" id="accordionExample">
+<!-- <div class="accordion accordion-flush" id="accordionExample">
   <div class="accordion-item">
     <h2 class="accordion-header" [id]="'heading' + id">
       <button
@@ -24,5 +24,19 @@
         example, example, example, example, example, example, example, example.
       </div>
     </div>
+  </div>
+</div> -->
+
+<div class="row">
+  <div class="col-xs-12">
+    <ul class="list-group">
+      <li
+        class="list-group-item list-group-item-info trans"
+        *ngFor="let accdata of accordion; let i = index"
+        >
+        <div (click)="onCollapseAccordion(accordionOpened)" style="cursor: pointer">{{ accdata.title }}</div>
+        <div #accordionOpened class="list-group-item-info inner-accordion">{{ accdata.description }}</div>
+      </li>
+    </ul>
   </div>
 </div>
