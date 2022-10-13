@@ -1,13 +1,61 @@
+// .box-container {
+//   display: flex;
+//   justify-content: center;
+//   flex-direction: row;
+// }
+
+// .boxone {
+//   width: 100px;
+//   height: 100px;
+//   background-color: rgb(193, 131, 185);
+// }
+
+// .boxtwo {
+//   width: 100px;
+//   height: 100px;
+//   background-color: rgb(194, 118, 185);
+// }
+
+// .boxthree {
+//   width: 100px;
+//   height: 100px;
+//   background-color: rgb(193, 108, 185);
+// }
+
 div.content {
   height: 100%;
   max-height: 100%;
 }
 
-.box {
+.inner-content {
+  margin: 0 auto;
+  display: flex;
+}
+
+.box-1 {
   background-color: rgb(193, 161, 185);
   width: 100px;
   height: 100px;
-  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  display: flex;
+  align-items: center;
+}
+
+.box-2 {
+  background-color: rgb(180, 140, 170);
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  display: flex;
+  align-items: center;
+}
+
+.box-3 {
+  background-color: rgb(159, 121, 149);
+  width: 100px;
+  height: 100px;
   display: flex;
   align-items: center;
   display: flex;
