@@ -9,7 +9,7 @@
         id="text"
         formControlName="text"
       />
-      <button class="btn btn-primary my-3" (click)="addNote()">Add</button>
+      <button class="btn btn-primary my-3" (click)="addNote()" [disabled]="form.invalid">Add</button>
       <button class="btn btn-danger my-3 mx-2" (click)="deleteAll()">
         Delete all
       </button>

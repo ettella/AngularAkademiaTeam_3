@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
-import { AuthService } from '../service/auth.service';
+import { Router } from '@angular/router';
+import { AuthService } from '../../../service/auth.service';
 
 @Component({
   selector: 'app-auth',
@@ -10,7 +11,7 @@ import { AuthService } from '../service/auth.service';
 export class AuthComponent implements OnInit {
 
   signInForm: FormGroup;
-  constructor(private authService: AuthService, private fb: FormBuilder) {
+  constructor(private authService: AuthService, private fb: FormBuilder, private router: Router) {
     this.signInForm = fb.group({
       email: ['', Validators.required],
       password: ['', Validators.required],
@@ -29,7 +30,8 @@ export class AuthComponent implements OnInit {
   }
 
   onSubmit() {
-    this.authService.signin(this.signInForm.value["email"], this.signInForm.value["password"])
+    this.authService.signin(this.signInForm.value["email"], this.signInForm.value["password"]);
+    this.router.navigate(['home']);
   }
 
 }

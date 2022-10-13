@@ -1,16 +1,27 @@
 
-button, .accordion-body {
-  background-color: rgb(147, 139, 147) !important;
-  text-align: center;
-  display: block;
+
+.accordionbox {
+  display: flex;
+  justify-content: center;
 }
 
-.accordion-button:after {
-  background-image: none;
+
+.trans {
+  transition: 0.7s;
 }
 
-.accordion-button:focus {
-  color: black;
-  box-shadow: none;
-  border: none;
+li:hover {
+  background-color: rgb(78, 188, 231);
+  color: white
+  
+}
+
+.inner-accordion{
+  display: none;
+  background-color: white;
+  padding:10px;
+  width: 100%;
+  border-radius: 4px;
+  margin-top: 5px;
+
 }

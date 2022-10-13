@@ -2,8 +2,8 @@ import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
-import { Notes } from '../models/notes-model';
-import { EditStickysService } from '../service/edit-stickys.service';
+import { Notes } from '../../../models/notes-model';
+import { EditStickysService } from '../../../service/edit-stickys.service';
 
 @Component({
   selector: 'app-edit-stickys',
