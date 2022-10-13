@@ -1,6 +1,6 @@
 <div class="container-form">
-  <div class="row mx-2" [formGroup]="form">
-    <div class="col-6">
+  <div class="row mx-2 align-container" [formGroup]="form">
+    <div class="col-4 form-box">
       <label class="label mt-2">Add note</label>
       <input
         type="text"
@@ -16,123 +16,121 @@
     </div>
   </div>
 
-  
-  <div class="col-6 align">
-    <p>Align Notes Horizontally</p>
-    <div class="btn-group" data-toggle="buttons">
-      <label class="btn btn-primary">
-        <input
+    <div class="col-4 align">
+      <p>Align Notes Horizontally</p>
+      <div class="btn-group" data-toggle="buttons">
+        <label class="btn btn-primary">
+          <input
           type="radio"
           name="options"
           id="option1"
           (click)="onSetAlignText('start')"
-        />
-        <img
+          />
+          <img
           src="assets/align-left.png"
           alt="align-left"
           class="img-fluid"
-        />
-      </label>
-      <label class="btn btn-primary">
-        <input
+          />
+        </label>
+        <label class="btn btn-primary">
+          <input
           type="radio"
           name="options"
           id="option2"
           (click)="onSetAlignText('center')"
-        />
-        <img
+          />
+          <img
           src="assets/align-right.png"
           alt="align-right"
           class="img-fluid"
-        />
-      </label>
-      <label class="btn btn-primary">
-        <input
+          />
+        </label>
+        <label class="btn btn-primary">
+          <input
           type="radio"
           name="options"
           id="option3"
           (click)="onSetAlignText('end')"
-        />
-        <img
+          />
+          <img
           src="assets/align-center.png"
           alt="align-center"
           class="img-fluid"
-        />
-      </label>
-      <label class="btn btn-primary">
-        <input
+          />
+        </label>
+        <label class="btn btn-primary">
+          <input
           type="radio"
           name="options"
           id="option4"
           (click)="onSetAlignText('space-between')"
-        />
-        <img
+          />
+          <img
           src="assets/justify-center.png"
           alt="align-justify"
           class="img-fluid"
-        />
-      </label>
+          />
+        </label>
+      </div>
     </div>
-  </div>
-
-  <div class="col-6 align">
-    <p>Align Notes Vertically</p>
-    <div class="btn-group" data-toggle="buttons">
-      <label class="btn btn-primary">
-        <input
+    <div class="col-4 align">
+      <p>Align Notes Vertically</p>
+      <div class="btn-group" data-toggle="buttons">
+        <label class="btn btn-primary">
+          <input
           type="radio"
           name="optionsa"
           id="option1a"
           (click)="onSetAlignTextVert('start')"
-        />
-        <img
+          />
+          <img
           src="assets/align-left.png"
           alt="align-left"
           class="img-fluid"
-        />
-      </label>
-      <label class="btn btn-primary">
-        <input
+          />
+        </label>
+        <label class="btn btn-primary">
+          <input
           type="radio"
           name="optionsa"
           id="option2a"
           (click)="onSetAlignTextVert('center')"
-        />
-        <img
+          />
+          <img
           src="assets/align-right.png"
           alt="align-right"
           class="img-fluid"
-        />
-      </label>
-      <label class="btn btn-primary">
-        <input
+          />
+        </label>
+        <label class="btn btn-primary">
+          <input
           type="radio"
           name="optionsa"
           id="option3a"
           (click)="onSetAlignTextVert('end')"
-        />
-        <img
+          />
+          <img
           src="assets/align-center.png"
           alt="align-center"
           class="img-fluid"
-        />
-      </label>
-      <label class="btn btn-primary">
-        <input
+          />
+        </label>
+        <label class="btn btn-primary">
+          <input
           type="radio"
           name="optionsa"
           id="option4a"
           (click)="onSetAlignTextVert('space-between')"
-        />
-        <img
+          />
+          <img
           src="assets/justify-center.png"
           alt="align-justify"
           class="img-fluid"
-        />
-      </label>
+          />
+        </label>
+      </div>
     </div>
   </div>
-</div>
 
 <div class="notes-container" [ngStyle]="{
   'justify-content': alignTextService.alignTextHor,
