@@ -14,18 +14,18 @@ img {
 }
 
 .first-layer {
-    background-color: aqua;
+    background-color: rgb(252, 222, 175);
     .first-box {
         display:grid;
-        
+
     }
 }
 
 .second-layer {
-    background-color: rgb(0, 195, 255);
+    background-color: rgb(173, 232, 255);
 }
 
 .third-layer {
-    background-color: rgb(196, 107, 231);
+    background-color: rgba(210,173,255,1);
 }
 

@@ -14,6 +14,7 @@ import { FormComponent } from './components/week_1/form/form.component';
 import { EditStickysComponent } from './components/week_1/edit-stickys/edit-stickys.component';
 import { AccordionComponent } from './components/week_1/accordion/accordion.component';
 import { HomePageComponent } from './components/home-page/home-page.component';
+import { GridExampleComponent } from './components/grid-example/grid-example.component';
 
 
 
@@ -29,7 +30,8 @@ import { HomePageComponent } from './components/home-page/home-page.component';
     AccordionComponent,
     FormComponent,
     EditStickysComponent,
-    HomePageComponent
+    HomePageComponent,
+    GridExampleComponent
   ],
   imports: [
     BrowserModule,

@@ -8,6 +8,7 @@ import { StickyNotesContainerComponent } from './components/week_1/sticky-notes-
 import { EditStickysComponent } from './components/week_1/edit-stickys/edit-stickys.component';
 import { AccordionComponent } from './components/week_1/accordion/accordion.component';
 import { HomePageComponent } from './components/home-page/home-page.component';
+import { GridExampleComponent } from './components/grid-example/grid-example.component';
 
 
 const routes: Routes = [
@@ -15,6 +16,7 @@ const routes: Routes = [
   {path: 'task-1', component: FirstExerciseComponent,  canActivate:[AuthGuard]},
   {path: 'home', component: HomePageComponent,  canActivate:[AuthGuard]},
   {path: 'accordion', component: AccordionComponent,  canActivate:[AuthGuard]},
+  {path: 'grid', component: GridExampleComponent,  canActivate:[AuthGuard]},
   {path: 'task-2', component: SecondExerciseComponent, canActivate:[AuthGuard]},
   {path: 'sticky', component: StickyNotesContainerComponent, canActivate:[AuthGuard]},
   {path: 'edit-note/:id', component: EditStickysComponent, canActivate: [AuthGuard]},
