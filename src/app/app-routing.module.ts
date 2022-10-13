@@ -7,11 +7,13 @@ import { AuthGuard } from './service/authguard.service';
 import { StickyNotesContainerComponent } from './components/week_1/sticky-notes-container/sticky-notes-container.component';
 import { EditStickysComponent } from './components/week_1/edit-stickys/edit-stickys.component';
 import { AccordionComponent } from './components/week_1/accordion/accordion.component';
+import { HomePageComponent } from './components/home-page/home-page.component';
 
 
 const routes: Routes = [
   {path: '', component: AuthComponent},
   {path: 'task-1', component: FirstExerciseComponent,  canActivate:[AuthGuard]},
+  {path: 'home', component: HomePageComponent,  canActivate:[AuthGuard]},
   {path: 'accordion', component: AccordionComponent,  canActivate:[AuthGuard]},
   {path: 'task-2', component: SecondExerciseComponent, canActivate:[AuthGuard]},
   {path: 'sticky', component: StickyNotesContainerComponent, canActivate:[AuthGuard]},

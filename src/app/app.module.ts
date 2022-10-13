@@ -13,6 +13,7 @@ import { StickyNotesComponent } from './components/week_1/sticky-notes/sticky-no
 import { FormComponent } from './components/week_1/form/form.component';
 import { EditStickysComponent } from './components/week_1/edit-stickys/edit-stickys.component';
 import { AccordionComponent } from './components/week_1/accordion/accordion.component';
+import { HomePageComponent } from './components/home-page/home-page.component';
 
 
 
@@ -27,7 +28,8 @@ import { AccordionComponent } from './components/week_1/accordion/accordion.comp
     StickyNotesComponent,
     AccordionComponent,
     FormComponent,
-    EditStickysComponent
+    EditStickysComponent,
+    HomePageComponent
   ],
   imports: [
     BrowserModule,
