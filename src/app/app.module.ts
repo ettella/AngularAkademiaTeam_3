@@ -15,6 +15,13 @@ import { EditStickysComponent } from './components/week_1/edit-stickys/edit-stic
 import { AccordionComponent } from './components/week_1/accordion/accordion.component';
 import { HomePageComponent } from './components/home-page/home-page.component';
 import { GridExampleComponent } from './components/grid-example/grid-example.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {CdkAccordionModule} from '@angular/cdk/accordion';
+import {MatButtonModule} from '@angular/material/button';
+import {MatButtonToggleModule} from '@angular/material/button-toggle';
+import {MatIconModule} from '@angular/material/icon';
+import {MatSidenavModule} from '@angular/material/sidenav';
 
 
 
@@ -37,7 +44,15 @@ import { GridExampleComponent } from './components/grid-example/grid-example.com
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    MatFormFieldModule,
+    CdkAccordionModule,
+    MatButtonModule,
+    MatButtonToggleModule,
+    MatIconModule,
+    MatSidenavModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
