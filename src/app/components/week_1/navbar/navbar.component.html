@@ -1,23 +1,24 @@
-<div *ngIf="isSignedIn()">
-  <ul class="nav flex-column">
-    <li class="nav-item">
-      <a [routerLink]="['task-1']">1st exercise</a>
-    </li>
-    <li class="nav-item">
-      <a [routerLink]="['task-2']">2nd exercise</a>
-    </li>
-    <li class="nav-item">
-      <a [routerLink]="['sticky']">Sticky notes</a>
-    </li>
-    <li class="nav-item">
-      <a [routerLink]="['accordion']">Accordion</a>
-    </li>
-    <li class="nav-item">
-      <a [routerLink]="['grid']">Grid example</a>
-    </li>
-    <li class="nav-item" (click)="signout()" *ngIf="isSignedIn()">
-      <button class="btn btn-danger my-3">Sign Out</button>
-    </li>
-  </ul>
-</div>
-
+<mat-drawer-container class="mat-container" *ngIf="isSignedIn()">
+  <mat-drawer mode="side" opened>
+    <ul class="nav flex-column">
+      <li class="nav-item">
+        <a [routerLink]="['task-1']">1st exercise</a>
+      </li>
+      <li class="nav-item">
+        <a [routerLink]="['task-2']">2nd exercise</a>
+      </li>
+      <li class="nav-item">
+        <a [routerLink]="['sticky']">Sticky notes</a>
+      </li>
+      <li class="nav-item">
+        <a [routerLink]="['accordion']">Accordion</a>
+      </li>
+      <li class="nav-item">
+        <a [routerLink]="['grid']">Grid example</a>
+      </li>
+      <li class="nav-item" (click)="signout()" *ngIf="isSignedIn()">
+        <button class="btn btn-danger my-3">Sign Out</button>
+      </li>
+    </ul>
+  </mat-drawer>
+</mat-drawer-container>
