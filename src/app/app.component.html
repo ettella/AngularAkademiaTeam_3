@@ -1,6 +1,6 @@
 <div class="container-fluid p-0">
   <div class="row p-0">
-    <div class="col nav-col pe-0">
+    <div class="col nav-col pe-0" *ngIf="isSignedIn()">
       <app-navbar></app-navbar>
     </div>
     <div class="col ps-0 pe-0">

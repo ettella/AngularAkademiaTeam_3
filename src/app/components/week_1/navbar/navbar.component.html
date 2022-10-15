@@ -1,4 +1,4 @@
-<mat-drawer-container class="mat-container" *ngIf="isSignedIn()">
+<mat-drawer-container class="mat-container">
   <mat-drawer mode="side" opened class="mat-drawer">
     <ul class="nav flex-column">
       <li class="nav-item">
@@ -16,7 +16,7 @@
       <li class="nav-item">
         <a [routerLink]="['grid']">Grid example</a>
       </li>
-      <li class="nav-item" (click)="signout()" *ngIf="isSignedIn()">
+      <li class="nav-item" (click)="signout()">
         <button mat-raised-button color="warn" class="my-3">Sign Out</button>
       </li>
     </ul>
