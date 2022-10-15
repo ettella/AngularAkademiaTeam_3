@@ -141,8 +141,8 @@
     *ngFor="let n of editStickysService.notes"
   >
     <div class="iconbox">
-      <div class="col-1 icon" [routerLink]="['/', 'edit-note', n.id]">✏️</div>
-      <div class="col-1 icon" (click)="deleteNotes(n)">❌</div>
+      <mat-icon class="col-1 icon" [routerLink]="['/', 'edit-note', n.id]">edit</mat-icon>
+      <mat-icon class="col-1 icon" (click)="deleteNotes(n)">delete_outline</mat-icon>
     </div>
 
     <div class="notes">
