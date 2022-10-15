@@ -11,6 +11,15 @@
   display: flex;
 }
 
+.mat-drawer {
+  background-color: rgb(147, 139, 147);
+  padding: 0;
+}
+
+.mat-drawer-side {
+  border:none;
+}
+
 li a {
   display: block;
   color: #000;
