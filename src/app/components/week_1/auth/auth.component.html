@@ -1,53 +1,44 @@
-<!-- <form [formGroup]="signInForm" (ngSubmit)="onSubmit()" id="login">
-    <div class="form-container">
-
-      <div class="form-group">
-        <label class="mt-2">Email</label>
+<div class="form-container">
+  <form
+    [formGroup]="signInForm"
+    (ngSubmit)="onSubmit()"
+    id="login"
+    class="form"
+  >
+    <div>
+      <mat-form-field appearance="fill" [style.width.px]=327>
+        <mat-label>Enter your email</mat-label>
         <input
-          type="text"
+          matInput
+          placeholder="pat@example.com"
           formControlName="email"
-          placeholder="Email"
-          class="form-control"
           id="email"
-          [class.is-invalid]="email.touched && email.invalid"
+          required
         />
-        <p *ngIf="email.hasError('required')" class="invalid-feedback" id="email">This filed is required!</p>
-      </div>
-
-      <div class="form-group">
-        <label class="mt-2">Password</label>
-        <input
-          type="password"
-          formControlName="password"
-          placeholder="Password"
-          class="form-control"
-          [class.is-invalid]="password.touched && password.invalid"
-        />
-        <p *ngIf="password.hasError('required')" class="invalid-feedback" id="password">This filed is required!</p>
-      </div>
-      <div class="text-center mt-2">
-        <button type="submit" mat-raised-button color="primary" >Submit</button>
-      </div>
+        <mat-error *ngIf="email.invalid">{{
+          getEmailErrorMessage()
+        }}</mat-error>
+      </mat-form-field>
     </div>
 
-  </form> -->
-
-
-  <div class="example-container" (ngSubmit)="onSubmit()" [formGroup]="signInForm">
-    <mat-form-field appearance="fill">
-      <mat-label>Enter your email</mat-label>
-      <input matInput placeholder="pat@example.com" required>
-      <!-- <mat-error *ngIf="email.invalid">{{getEmailErrorMessage()}}</mat-error> -->
-    </mat-form-field>
-
-    <mat-form-field appearance="fill">
+    <mat-form-field appearance="fill" [style.width.px]=327>
       <mat-label>Enter your password</mat-label>
-      <input matInput [type]="hide ? 'password' : 'text'"  required>
-      <!-- <mat-error *ngIf="password.invalid">{{getPasswordErrorMessage()}}</mat-error> -->
-      <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
-        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
-      </button>
+      <input
+        matInput [type]="hide ? 'password' : 'text'"
+        placeholder="password"
+        formControlName="password"
+        id="password"
+        required
+      />
+      <mat-error *ngIf="password.invalid">{{
+        getPasswordErrorMessage()
+      }}</mat-error>
+       <span mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+      <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+       </span>
     </mat-form-field>
-    <button type="submit" mat-raised-button color="primary" >Submit</button>
-  
+    <div class="text-center mt-2">
+      <button type="submit" mat-raised-button color="primary">Submit</button>
+    </div>
+  </form>
 </div>
