@@ -1,4 +1,4 @@
-<form [formGroup]="signInForm" (ngSubmit)="onSubmit()" id="login">
+<!-- <form [formGroup]="signInForm" (ngSubmit)="onSubmit()" id="login">
     <div class="form-container">
 
       <div class="form-group">
@@ -30,4 +30,24 @@
       </div>
     </div>
 
-  </form>
+  </form> -->
+
+
+  <div class="example-container" (ngSubmit)="onSubmit()" [formGroup]="signInForm">
+    <mat-form-field appearance="fill">
+      <mat-label>Enter your email</mat-label>
+      <input matInput placeholder="pat@example.com" required>
+      <!-- <mat-error *ngIf="email.invalid">{{getEmailErrorMessage()}}</mat-error> -->
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Enter your password</mat-label>
+      <input matInput [type]="hide ? 'password' : 'text'"  required>
+      <!-- <mat-error *ngIf="password.invalid">{{getPasswordErrorMessage()}}</mat-error> -->
+      <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+      </button>
+    </mat-form-field>
+    <button type="submit" mat-raised-button color="primary" >Submit</button>
+  
+</div>

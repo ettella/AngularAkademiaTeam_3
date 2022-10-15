@@ -11,15 +11,20 @@ import { AuthService } from '../../../service/auth.service';
 export class AuthComponent implements OnInit {
 
   signInForm: FormGroup;
+
+  // email = new FormControl('', [Validators.required, Validators.email]);
+  // password = new FormControl('', [Validators.required]);
+  hide = true;
+
   constructor(private authService: AuthService, private fb: FormBuilder, private router: Router) {
     this.signInForm = fb.group({
-      email: ['', Validators.required],
+      email: ['', [Validators.required, Validators.email]],
       password: ['', Validators.required],
     });
-  }
+   }
 
   get email() : FormControl{
-    return this.signInForm.get('email') as FormControl
+    return this.email.get('email') as FormControl
   }
 
   get password() : FormControl{
@@ -30,8 +35,23 @@ export class AuthComponent implements OnInit {
   }
 
   onSubmit() {
-    this.authService.signin(this.signInForm.value["email"], this.signInForm.value["password"]);
+    this.authService.signin(this.email.value["email"], this.password.value["password"]);
     this.router.navigate(['home']);
   }
+  
 
+  // getEmailErrorMessage() {
+  //   if (this.email.hasError('required')) {
+  //     return 'You must enter a value';
+  //   }
+
+  //   return this.email.hasError('email') ? 'Not a valid email' : '';
+  // }
+
+  // getPasswordErrorMessage() {
+  //   if (this.password.hasError('required')) {
+  //     return 'You must enter a value';
+  //   }
+  //   return this.password.hasError('password') ? 'Not a valid password' : '';
+  // }
 }

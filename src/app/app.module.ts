@@ -22,8 +22,7 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import {MatIconModule} from '@angular/material/icon';
 import {MatSidenavModule} from '@angular/material/sidenav';
-
-
+import { MatInputModule } from '@angular/material/input';
 
 @NgModule({
   declarations: [
@@ -51,7 +50,9 @@ import {MatSidenavModule} from '@angular/material/sidenav';
     MatButtonModule,
     MatButtonToggleModule,
     MatIconModule,
-    MatSidenavModule
+    MatSidenavModule,
+    MatInputModule
+
 
   ],
   providers: [],
