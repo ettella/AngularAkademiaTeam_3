@@ -1,26 +1,25 @@
-import { Injectable } from "@angular/core";
-import { Router } from "@angular/router";
+import { Injectable } from '@angular/core';
+import { Router } from '@angular/router';
 
-const EMAIL = "admin@admin.com"
-const PASSWORD = "admin"
+const EMAIL = 'admin@admin.com';
+const PASSWORD = 'admin';
 
-@Injectable({providedIn: 'root'})
+@Injectable({ providedIn: 'root' })
 export class AuthService {
-
-
   constructor(private router: Router) {}
-  signin(email: string, pass: string) {
+
+  signin(email: string, pass: string): void {
     if (email == EMAIL && pass == PASSWORD) {
-      localStorage.setItem("signedin", "true")
+      localStorage.setItem('signedin', 'true');
     }
   }
 
-  isSignedIn() {
-    return localStorage.getItem("signedin") === "true"
+  isSignedIn(): boolean {
+    return localStorage.getItem('signedin') === 'true';
   }
 
-  signOut() {
+  signOut(): void {
     localStorage.clear();
-    this.router.navigate(['/'])
+    this.router.navigate(['/']);
   }
 }
