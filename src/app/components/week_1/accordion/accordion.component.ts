@@ -17,29 +17,11 @@ export class Data {
 })
 export class AccordionComponent implements OnInit {
 
-  accordion: Data[];
+  
+    items = ['Item 1', 'Item 2', 'Item 3', 'Item 4', 'Item 5'];
+    expandedIndex = 0;
 
   constructor() {
-    this.accordion = [{
-      title: 'Angular Bootcamp',
-      description: ' Angular ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, officia reprehenderit dolore architecto rerum libero, voluptatem ipsa exercitationem quae suscipit adipisci minus? Eum eveniet error, consequuntur asperiores impedit laudantium atque!'
-    },
-    {
-      title: 'Figma',
-      description: 'Figma ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, officia reprehenderit dolore architecto rerum libero, voluptatem ipsa exercitationem quae suscipit adipisci minus? Eum eveniet error, consequuntur asperiores impedit laudantium atque!'
-    },
-    {
-      title: 'Typescript',
-      description: 'Typsecript ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, officia reprehenderit dolore architecto rerum libero, voluptatem ipsa exercitationem quae suscipit adipisci minus? Eum eveniet error, consequuntur asperiores impedit laudantium atque!'
-    },
-    {
-      title: 'Javascript',
-      description: 'Javascript ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, officia reprehenderit dolore architecto rerum libero, voluptatem ipsa exercitationem quae suscipit adipisci minus? Eum eveniet error, consequuntur asperiores impedit laudantium atque!'
-    },
-    {
-      title: 'Angular Libraries',
-      description: 'Angular Libraries ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, officia reprehenderit dolore architecto rerum libero, voluptatem ipsa exercitationem qua suscipit adipisci minus? Eum eveniet error, consequuntur asperiores impedit laudantium atque!'
-    }]
 
    }
 
@@ -47,13 +29,6 @@ export class AccordionComponent implements OnInit {
   }
 
 
-  onCollapseAccordion(event: any ){
-    if (event.style.display === "flex") {
-      event.style.display = "none";
-  } else {
-        event.style.display = "flex";
-   }  
-}
 
 
 

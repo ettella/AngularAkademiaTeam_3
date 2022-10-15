@@ -9,14 +9,14 @@
         id="text"
         formControlName="text"
       />
-      <button class="btn btn-primary my-3" (click)="addNote()" [disabled]="form.invalid">Add</button>
-      <button class="btn btn-danger my-3 mx-2" (click)="deleteAll()">
+      <button mat-raised-button color="primary" class="my-3" (click)="addNote()" [disabled]="form.invalid"> Add</button>
+      <button mat-raised-button color="warn" class="my-3 mx-2" (click)="deleteAll()">
         Delete all
       </button>
     </div>
   </div>
 
-    <div class="col-4 align">
+<div class="col-4 align">
       <p>Align Notes Horizontally</p>
       <div class="btn-group" data-toggle="buttons">
         <label class="btn btn-primary">
@@ -130,7 +130,9 @@
         </label>
       </div>
     </div>
-  </div>
+  </div> 
+
+
 
 <div class="notes-container" [ngStyle]="{
   'justify-content': alignTextService.alignTextHor,

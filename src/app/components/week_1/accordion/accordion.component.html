@@ -1,14 +1,29 @@
 
-<div class="row accordionbox my-5">
-  <div class="col-8">
-    <ul class="list-group">
-      <li
-        class="p-2 list-group-item list-group-item-info trans"
-        *ngFor="let accdata of accordion; let i = index"
-        >
-        <div (click)="onCollapseAccordion(accordionOpened)" style="cursor: pointer">{{ accdata.title }}</div>
-        <div #accordionOpened class="list-group-item-info inner-accordion">{{ accdata.description }}</div>
-      </li>
-    </ul>
-  </div>
-</div>
+<cdk-accordion class="example-accordion">
+  <cdk-accordion-item
+    *ngFor="let item of items; let index = index;"
+    #accordionItem="cdkAccordionItem"
+    class="example-accordion-item"
+    role="button"
+    tabindex="0"
+    [attr.id]="'accordion-header-' + index"
+    [attr.aria-expanded]="accordionItem.expanded"
+    [attr.aria-controls]="'accordion-body-' + index">
+    <div class="example-accordion-item-header" (click)="accordionItem.toggle()">
+      {{ item }}
+      <span class="example-accordion-item-description">
+        Click to {{ accordionItem.expanded ? 'close' : 'open' }}
+      </span>
+    </div>
+    <div
+      class="example-accordion-item-body"
+      role="region"
+      [style.display]="accordionItem.expanded ? '' : 'none'"
+      [attr.id]="'accordion-body-' + index"
+      [attr.aria-labelledby]="'accordion-header-' + index">
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis
+      excepturi incidunt ipsum deleniti labore, tempore non nam doloribus blanditiis
+      veritatis illo autem iure aliquid ullam rem tenetur deserunt velit culpa?
+    </div>
+  </cdk-accordion-item>
+</cdk-accordion>
