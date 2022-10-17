@@ -1,14 +1,15 @@
 <div class="container-form">
   <div class="row mx-2 align-container" id="form" [formGroup]="form">
-    <div class="col-4 form-box">
-      <label class="label mt-2">Add note</label>
-      <input
-        type="text"
-        placeholder="type..."
-        class="form-control"
-        id="text"
-        formControlName="text"
-      />
+    <div class="col-4 mt-5 form-box">
+
+      <mat-form-field appearance="fill">
+        <mat-label>Add note</mat-label>
+        <input matInput
+               placeholder="Type"
+               id="text"
+               formControlName="text">
+      </mat-form-field>
+
       <button mat-raised-button color="primary" class="my-3" (click)="addNote()" [disabled]="form.invalid"> Add</button>
       <button mat-raised-button color="warn" class="my-3 mx-2" (click)="deleteAll()">
         Delete all
@@ -134,7 +135,7 @@
 
 
 
-<div class="notes-container" [ngStyle]="{
+<div class="notes-container mx-2" [ngStyle]="{
   'justify-content': alignTextService.alignTextHor,
   'align-content': alignTextService.alignTextVert
 }">

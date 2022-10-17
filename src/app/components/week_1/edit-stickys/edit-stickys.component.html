@@ -1,19 +1,23 @@
-<div class="container-fluid m-2">
+<div class="container-fluid mx-3 mt-5" >
+  <form [formGroup]="form" id="editForm">
 
-    <form [formGroup]="form">
-      Edit Note
-      <textarea
-        type="text"
-        class="form-control my-2"
-        placeholder="Note"
-        formControlName="text"
-      ></textarea>
+    <mat-form-field appearance="fill">
+      <mat-label>Edit Note</mat-label>
+      <textarea matInput placeholder="Note" formControlName="text"></textarea>
+    </mat-form-field>
 
-      <div class="row">
-        <div>
-          <button mat-raised-button color="primary" class="my-2" id="saveNote" (click)="saveNote()">Save</button>
-        </div>
+    <div class="row">
+      <div>
+        <button
+          mat-raised-button
+          color="primary"
+          class="my-2"
+          id="saveNote"
+          (click)="saveNote()"
+        >
+          Save
+        </button>
       </div>
-    </form>
-
-  </div>
+    </div>
+  </form>
+</div>
