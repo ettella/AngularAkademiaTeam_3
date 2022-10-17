@@ -1,46 +1,61 @@
-<div class="container">
+
+
+<div class="container m-5">
+
+    <div class="row first-layer m-3">
+        <div class="col-6 number-box">
+          <div class="number">1</div>
+        </div>
+    
+        <div class="col-6 p-3 box">
+            <mat-grid-list cols="3" rowHeight="100px">
+              <mat-grid-tile
+                  *ngFor="let tile of tiles1"
+                  [colspan]="tile.cols"
+                  [rowspan]="tile.rows"
+                  [style.background]="tile.color">
+                {{tile.text}}
+              </mat-grid-tile>
+            </mat-grid-list>
+        </div>
+    </div>
+
+    <div class="row first-layer m-3">
+      <div class="col-6 number-box">
+        <div class="number">2</div>
+      </div>
+  
+      <div class="col-6 p-3 box">
+          <mat-grid-list cols="3" rowHeight="100px">
+            <mat-grid-tile
+                *ngFor="let tile of tiles2"
+                [colspan]="tile.cols"
+                [rowspan]="tile.rows"
+                [style.background]="tile.color">
+              {{tile.text}}
+            </mat-grid-tile>
+          </mat-grid-list>
+      </div>
+  </div>
+
   <div class="row first-layer m-3">
-    <div class="col-6 number-box">
-      <div class="number">1</div>
-    </div>
-
-    <div class="col-6 p-3 first-box">
-      <div class="a img"></div>
-      <div class="b img"></div>
-      <div class="c img"></div>
-    </div>
-  </div>
-
-  <div class="row second-layer m-3">
-    <div class="col-6 number-box">
-      <div class="number">2</div>
-    </div>
-
-    <div class="col-6 p-3 second-box">
-      <div class="d img"></div>
-      <div class="e img"></div>
-      <div class="f img"></div>
-      <div class="g img"></div>
-    </div>
-  </div>
-
-  <div class="row third-layer m-3">
     <div class="col-6 number-box">
       <div class="number">3</div>
     </div>
 
-    <div class="col-6 p-3">
-      <div class="wrappertop">
-        <div class="h img"></div>
-        <div class="i img"></div>
-      </div>
-
-      <div class="wrapperbot">
-        <div class="j img"></div>
-        <div class="k img"></div>
-        <div class="l img"></div>
-        <div class="m img"></div>
-      </div>
+    <div class="col-6 p-3 box">
+        <mat-grid-list cols="6" rowHeight="50px">
+          <mat-grid-tile
+              *ngFor="let tile of tiles3"
+              [colspan]="tile.cols"
+              [rowspan]="tile.rows"
+              [style.background]="tile.color">
+            {{tile.text}}
+          </mat-grid-tile>
+        </mat-grid-list>
     </div>
-  </div>
 </div>
+
+</div>
+
+
