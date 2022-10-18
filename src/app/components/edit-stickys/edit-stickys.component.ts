@@ -28,6 +28,7 @@ export class EditStickysComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.currentId = this.activatedRoute.snapshot.params['id'];
     if (this.currentId == 0) {
       this.selectedNote = this.newNote;
     } else {
@@ -38,7 +39,6 @@ export class EditStickysComponent implements OnInit {
         id, text
       })
     }
-    this.currentId = this.activatedRoute.snapshot.params['id'];
   }
 
 
