@@ -36,7 +36,11 @@ export class AuthComponent implements OnInit {
     return this.signInForm.get('password') as FormControl;
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    if (this.authService.isSignedIn()) {
+      this.router.navigate(['/task-1'])
+    }
+  }
 
   protected onSubmit(): void {
     this.authService.signin(this.email.value, this.password.value);
