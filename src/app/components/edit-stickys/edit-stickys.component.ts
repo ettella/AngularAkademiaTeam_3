@@ -21,8 +21,6 @@ export class EditStickysComponent implements OnInit {
       id: [Number],
       text: ['']
     })
-
-
   }
 
   get text(): FormControl {
