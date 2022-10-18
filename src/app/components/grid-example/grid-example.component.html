@@ -13,8 +13,7 @@
                   *ngFor="let tile of tiles1"
                   [colspan]="tile.cols"
                   [rowspan]="tile.rows"
-                  [style.background]="tile.color">
-                {{tile.text}}
+                  >
               </mat-grid-tile>
             </mat-grid-list>
         </div>
@@ -31,8 +30,7 @@
                 *ngFor="let tile of tiles2"
                 [colspan]="tile.cols"
                 [rowspan]="tile.rows"
-                [style.background]="tile.color">
-              {{tile.text}}
+                >
             </mat-grid-tile>
           </mat-grid-list>
       </div>
@@ -49,8 +47,7 @@
               *ngFor="let tile of tiles3"
               [colspan]="tile.cols"
               [rowspan]="tile.rows"
-              [style.background]="tile.color">
-            {{tile.text}}
+              >
           </mat-grid-tile>
         </mat-grid-list>
     </div>
