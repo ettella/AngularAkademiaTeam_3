@@ -1,6 +1,6 @@
 
 import { Injectable } from '@angular/core';
-import { Notes } from '../models/notes-model';
+import { Notes } from '../domain/notes-model';
 
 @Injectable({
   providedIn: 'root'
@@ -9,7 +9,7 @@ export class EditStickysService {
 
  notes : Notes[] = []
 
-  constructor() { 
+  constructor() {
     this.notes=[
       {id: 1, text: 'This to-do list template for Word allows you to mark each items priority'},
       {id: 2, text:'Due date, what to do, who to contact, steps in progress, and done fields for each entry. '},
@@ -18,22 +18,22 @@ export class EditStickysService {
      ];
   }
 
-  addNote(note: Notes){
+  addNote(note: Notes): void {
     note.id = this.notes.length + 1;
     this.notes.push(note)
   }
 
-  deleteNote(note: Notes){
+  deleteNote(note: Notes): void {
     let index = this.notes.findIndex(x=>x.id == note.id);
     this.notes.splice(index,1)
   }
 
-  saveNote(note: Notes){
+  saveNote(note: Notes): void {
     const index = this.notes.findIndex((x) => x.id == note.id);
     this.notes.splice(index, 1, note);
    }
 
-  getNoteById(id: number) {
+  getNoteById(id: number): Notes {
     const index = this.notes.findIndex((x) => x.id == id);
     return this.notes[index];
   }
