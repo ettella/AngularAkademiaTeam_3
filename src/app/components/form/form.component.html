@@ -1,0 +1,113 @@
+<div class="container-form">
+  <div class="row mx-2 align-container" id="form" [formGroup]="form">
+    <div class="col-4 mt-5 form-box">
+      <mat-form-field appearance="fill">
+        <mat-label>Add note</mat-label>
+        <input matInput placeholder="Type" id="text" formControlName="text" />
+      </mat-form-field>
+
+      <button
+        mat-raised-button
+        color="primary"
+        class="my-3"
+        (click)="addNote()"
+        [disabled]="form.invalid"
+      >
+        Add
+      </button>
+      <button
+        mat-raised-button
+        color="warn"
+        class="my-3 mx-2"
+        (click)="deleteAll()"
+      >
+        Delete all
+      </button>
+    </div>
+  </div>
+
+  <div class="col-4 align">
+    <p class="m-2">Align Notes Horizontally</p>
+    <div class="btn-group">
+      <mat-button-toggle-group #group="matButtonToggleGroup">
+        <mat-button-toggle value="left" aria-label="Text align left">
+          <mat-icon (click)="onSetAlignText('start')"
+            >format_align_left</mat-icon
+          >
+        </mat-button-toggle>
+
+        <mat-button-toggle value="center" aria-label="Text align center">
+          <mat-icon (click)="onSetAlignText('center')"
+            >format_align_center</mat-icon
+          >
+        </mat-button-toggle>
+
+        <mat-button-toggle value="right" aria-label="Text align right">
+          <mat-icon (click)="onSetAlignText('end')"
+            >format_align_right</mat-icon
+          >
+        </mat-button-toggle>
+
+        <mat-button-toggle value="justify" aria-label="Text align justify">
+          <mat-icon (click)="onSetAlignText('space-between')"
+            >format_align_justify</mat-icon
+          >
+        </mat-button-toggle>
+      </mat-button-toggle-group>
+    </div>
+  </div>
+
+  <div class="col-4 align">
+    <p class="m-2">Align Notes Vertically</p>
+    <div class="btn-group">
+      <mat-button-toggle-group #group="matButtonToggleGroup">
+        <mat-button-toggle value="left" aria-label="Text align left">
+          <mat-icon (click)="onSetAlignTextVert('start')"
+            >format_align_left</mat-icon
+          >
+        </mat-button-toggle>
+
+        <mat-button-toggle value="center" aria-label="Text align center">
+          <mat-icon (click)="onSetAlignTextVert('center')"
+            >format_align_center</mat-icon
+          >
+        </mat-button-toggle>
+
+        <mat-button-toggle value="right" aria-label="Text align right">
+          <mat-icon (click)="onSetAlignTextVert('end')"
+            >format_align_right</mat-icon
+          >
+        </mat-button-toggle>
+
+        <mat-button-toggle value="justify" aria-label="Text align justify">
+          <mat-icon (click)="onSetAlignTextVert('space-between')"
+            >format_align_justify</mat-icon
+          >
+        </mat-button-toggle>
+      </mat-button-toggle-group>
+    </div>
+  </div>
+</div>
+
+<div
+  class="notes-container mx-2"
+  [ngStyle]="{
+    'justify-content': alignTextService.alignTextHor,
+    'align-content': alignTextService.alignTextVert
+  }"
+>
+  <div *ngFor="let n of editStickysService.notes">
+    <div class="iconbox">
+      <mat-icon class="col-1 icon" [routerLink]="['/', 'edit-note', n.id]"
+        >edit</mat-icon
+      >
+      <mat-icon class="col-1 icon" (click)="deleteNotes(n)"
+        >delete_outline</mat-icon
+      >
+    </div>
+
+    <div class="notes">
+      {{ n.text }}
+    </div>
+  </div>
+</div>

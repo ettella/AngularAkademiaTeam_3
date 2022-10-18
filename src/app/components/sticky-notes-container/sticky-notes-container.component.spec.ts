@@ -37,7 +37,7 @@ describe('StickyNotesContainerComponent', () => {
     const form:HTMLFormElement = el.querySelector('#form');
     form.dispatchEvent(new Event('click'));
     fixture.detectChanges();
-    
+
     //check if note was created
     expect(el.querySelectorAll('.notes').length).toBe(4);
 

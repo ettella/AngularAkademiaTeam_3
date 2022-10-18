@@ -1,12 +1,12 @@
-import { FirstExerciseComponent } from './components/week_1/first-exercise/first-exercise.component';
+import { FirstExerciseComponent } from './components/first-exercise/first-exercise.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { SecondExerciseComponent } from './components/week_1/second-exercise/second-exercise.component';
-import { AuthComponent } from './components/week_1/auth/auth.component';
+import { SecondExerciseComponent } from './components/second-exercise/second-exercise.component';
+import { AuthComponent } from './components/auth/auth.component';
 import { AuthGuard } from './service/authguard.service';
-import { StickyNotesContainerComponent } from './components/week_1/sticky-notes-container/sticky-notes-container.component';
-import { EditStickysComponent } from './components/week_1/edit-stickys/edit-stickys.component';
-import { AccordionComponent } from './components/week_1/accordion/accordion.component';
+import { StickyNotesContainerComponent } from './components/sticky-notes-container/sticky-notes-container.component';
+import { EditStickysComponent } from './components/edit-stickys/edit-stickys.component';
+import { AccordionComponent } from './components/accordion/accordion.component';
 import { HomePageComponent } from './components/home-page/home-page.component';
 import { GridExampleComponent } from './components/grid-example/grid-example.component';
 
