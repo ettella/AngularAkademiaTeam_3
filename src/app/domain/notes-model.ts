@@ -3,7 +3,7 @@ export class Notes{
     text: string;
 
     constructor(){
-        
+
         this.text = '';
 
     }

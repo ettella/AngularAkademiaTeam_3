@@ -13,7 +13,6 @@ import { EditStickysService } from '../../service/edit-stickys.service';
 export class EditStickysComponent implements OnInit {
   form: FormGroup;
   selectedNote!: Notes
-  // notes = notesMock;
   currentId!: number;
   newNote: Notes = new Notes();
 
@@ -22,7 +21,7 @@ export class EditStickysComponent implements OnInit {
       id: [Number],
       text: ['']
     })
-    this.currentId = activatedRoute.snapshot.params['id'];
+
 
   }
 
@@ -41,6 +40,7 @@ export class EditStickysComponent implements OnInit {
         id, text
       })
     }
+    this.currentId = this.activatedRoute.snapshot.params['id'];
   }
 
 

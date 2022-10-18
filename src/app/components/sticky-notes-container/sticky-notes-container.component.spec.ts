@@ -1,7 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { AppModule } from 'src/app/app.module';
-import { FormComponent } from '../form/form.component';
-import { StickyNotesComponent } from '../sticky-notes/sticky-notes.component';
 import { StickyNotesContainerComponent } from './sticky-notes-container.component';
 
 describe('StickyNotesContainerComponent', () => {

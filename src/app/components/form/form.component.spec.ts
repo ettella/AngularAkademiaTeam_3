@@ -1,4 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ReactiveFormsModule } from '@angular/forms';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
+import { RouterTestingModule } from '@angular/router/testing';
 
 import { FormComponent } from './form.component';
 
@@ -8,7 +11,8 @@ describe('FormComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ FormComponent ]
+      declarations: [ FormComponent ],
+      imports: [ ReactiveFormsModule, RouterTestingModule, MatButtonToggleModule ]
     })
     .compileComponents();
 

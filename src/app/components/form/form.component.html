@@ -30,26 +30,26 @@
     <p class="m-2">Align Notes Horizontally</p>
     <div class="btn-group">
       <mat-button-toggle-group #group="matButtonToggleGroup">
-        <mat-button-toggle value="left" aria-label="Text align left">
-          <mat-icon (click)="onSetAlignText('start')"
+        <mat-button-toggle value="left" aria-label="Text align left" (click)="onSetAlignText('start')">
+          <mat-icon
             >format_align_left</mat-icon
           >
         </mat-button-toggle>
 
-        <mat-button-toggle value="center" aria-label="Text align center">
-          <mat-icon (click)="onSetAlignText('center')"
+        <mat-button-toggle value="center" aria-label="Text align center" (click)="onSetAlignText('center')">
+          <mat-icon
             >format_align_center</mat-icon
           >
         </mat-button-toggle>
 
-        <mat-button-toggle value="right" aria-label="Text align right">
-          <mat-icon (click)="onSetAlignText('end')"
+        <mat-button-toggle value="right" aria-label="Text align right" (click)="onSetAlignText('end')">
+          <mat-icon
             >format_align_right</mat-icon
           >
         </mat-button-toggle>
 
-        <mat-button-toggle value="justify" aria-label="Text align justify">
-          <mat-icon (click)="onSetAlignText('space-between')"
+        <mat-button-toggle value="justify" aria-label="Text align justify" (click)="onSetAlignText('space-between')">
+          <mat-icon
             >format_align_justify</mat-icon
           >
         </mat-button-toggle>
@@ -61,27 +61,26 @@
     <p class="m-2">Align Notes Vertically</p>
     <div class="btn-group">
       <mat-button-toggle-group #group="matButtonToggleGroup">
-        <mat-button-toggle value="left" aria-label="Text align left">
-          <mat-icon (click)="onSetAlignTextVert('start')"
+        <mat-button-toggle value="left" aria-label="Text align left" (click)="onSetAlignTextVert('start')">
+          <mat-icon
             >format_align_left</mat-icon
           >
         </mat-button-toggle>
 
-        <mat-button-toggle value="center" aria-label="Text align center">
-          <mat-icon (click)="onSetAlignTextVert('center')"
+        <mat-button-toggle value="center" aria-label="Text align center" (click)="onSetAlignTextVert('center')">
+          <mat-icon
             >format_align_center</mat-icon
           >
         </mat-button-toggle>
 
-        <mat-button-toggle value="right" aria-label="Text align right">
-          <mat-icon (click)="onSetAlignTextVert('end')"
+        <mat-button-toggle value="right" aria-label="Text align right" (click)="onSetAlignTextVert('end')">
+          <mat-icon
             >format_align_right</mat-icon
           >
         </mat-button-toggle>
 
-        <mat-button-toggle value="justify" aria-label="Text align justify">
-          <mat-icon (click)="onSetAlignTextVert('space-between')"
-            >format_align_justify</mat-icon
+        <mat-button-toggle value="justify" aria-label="Text align justify" (click)="onSetAlignTextVert('space-between')">
+          <mat-icon>format_align_justify</mat-icon
           >
         </mat-button-toggle>
       </mat-button-toggle-group>

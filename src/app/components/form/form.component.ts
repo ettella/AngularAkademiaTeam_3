@@ -1,4 +1,3 @@
-
 import { ActivatedRoute } from '@angular/router';
 import { Notes } from '../../domain/notes-model';
 import {
@@ -7,10 +6,7 @@ import {
   FormControl,
   Validators,
 } from '@angular/forms';
-import {
-  Component,
-  OnInit,
-} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { AlignTextService } from '../../service/align-text.service';
 import { EditStickysService } from '../../service/edit-stickys.service';
 
@@ -30,44 +26,42 @@ export class FormComponent implements OnInit {
     fb: FormBuilder,
     public alignTextService: AlignTextService,
     public editStickysService: EditStickysService,
-    public activatedRoute: ActivatedRoute,
+    public activatedRoute: ActivatedRoute
   ) {
     this.form = fb.group({
       text: ['', Validators.required],
     });
-    this.currentId = activatedRoute.snapshot.params['id'];
   }
 
-  get text(): FormControl{
-    return this.form.get('text') as FormControl
+  get text(): FormControl {
+    return this.form.get('text') as FormControl;
   }
 
   ngOnInit(): void {
     if (this.currentId == 0) {
       this.stickyItem = this.newNote;
     }
+    this.currentId = this.activatedRoute.snapshot.params['id'];
   }
 
-  onSetAlignText(v: string): any {
+  public onSetAlignText(v: string): void {
     this.alignTextService.alignTextHor = v;
   }
 
-  onSetAlignTextVert(v: string): any {
+  public onSetAlignTextVert(v: string): void {
     this.alignTextService.alignTextVert = v;
   }
 
-  deleteNotes(note: Notes) {
+  public deleteNotes(note: Notes): void {
     this.editStickysService.deleteNote(note);
   }
 
-  addNote() {
+  public addNote(): void {
     let addedSticky: Notes = this.form.value as Notes;
     this.editStickysService.addNote(addedSticky);
   }
 
-  deleteAll() {
+  public deleteAll(): void {
     this.notes.splice(0, this.notes.length);
   }
-
-
 }
