@@ -1,16 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { Router } from '@angular/router';
+import { RouterTestingModule } from '@angular/router/testing';
 import { AppModule } from 'src/app/app.module';
+import { EditStickysComponent } from '../edit-stickys/edit-stickys.component';
 import { StickyNotesContainerComponent } from './sticky-notes-container.component';
 
 describe('StickyNotesContainerComponent', () => {
   let component: StickyNotesContainerComponent;
   let fixture: ComponentFixture<StickyNotesContainerComponent>;
   let el: any;
+  let router: Router;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [ StickyNotesContainerComponent ],
-      imports: [AppModule]
+      imports: [AppModule, EditStickysComponent, RouterTestingModule.withRoutes([]) ]
     })
     .compileComponents();
 
@@ -18,6 +22,7 @@ describe('StickyNotesContainerComponent', () => {
     component = fixture.componentInstance;
     fixture.detectChanges();
     el = fixture.debugElement.nativeElement;
+    router = TestBed.inject(Router)
   });
 
   it('should create', () => {
@@ -57,9 +62,19 @@ describe('StickyNotesContainerComponent', () => {
     expect(el.querySelectorAll('.notes').length).toBe(0);
   })
 
-  it('should edit the sticky note', () => {
 
-  })
+  // it('should navigate to the edit page', () => {
+
+  //   const component = fixture.componentInstance;
+  //   const navigateSpy = spyOn(router, 'navigate');
+
+  //   component.ngOnInit();
+  //   expect(navigateSpy).toHaveBeenCalledWith(['/edit-note'])
+
+  // })
+
+
+
 
   it('should be align items to the center horizontally', () => {
     const noteContainer: HTMLElement = el.querySelector('.notes-container')
