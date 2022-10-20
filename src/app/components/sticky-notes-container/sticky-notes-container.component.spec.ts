@@ -85,7 +85,7 @@ describe('StickyNotesContainerComponent', () => {
     expect(el.querySelector('.notes-container').getAttribute("style").endsWith("end;")).toBeTrue()
   })
 
-  it('should be align items to the center horizontally', () => {
+  it('should be align items to the centered space-between horizontally', () => {
     const noteContainer: HTMLElement = el.querySelector('.notes-container')
     el.querySelector('#horizontal-space-between').dispatchEvent(new Event('click'))
     fixture.detectChanges()
