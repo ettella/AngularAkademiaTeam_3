@@ -1,11 +1,15 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { AppModule } from 'src/app/app.module';
+import { EditStickysComponent } from '../edit-stickys/edit-stickys.component';
 import { StickyNotesContainerComponent } from './sticky-notes-container.component';
 
 describe('StickyNotesContainerComponent', () => {
   let component: StickyNotesContainerComponent;
+  let editComponent: EditStickysComponent
   let fixture: ComponentFixture<StickyNotesContainerComponent>;
+  let fixtureEditComponent: ComponentFixture<EditStickysComponent>;
   let el: any;
+  let elEdit: any;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
@@ -15,9 +19,12 @@ describe('StickyNotesContainerComponent', () => {
     .compileComponents();
 
     fixture = TestBed.createComponent(StickyNotesContainerComponent);
+    fixtureEditComponent = TestBed.createComponent(EditStickysComponent)
     component = fixture.componentInstance;
+    editComponent = fixtureEditComponent.componentInstance
     fixture.detectChanges();
     el = fixture.debugElement.nativeElement;
+    elEdit = fixtureEditComponent.debugElement.nativeElement
   });
 
   it('should create', () => {
@@ -55,10 +62,6 @@ describe('StickyNotesContainerComponent', () => {
     deleteIcon.dispatchEvent(new Event('click'))
     fixture.detectChanges();
     expect(el.querySelectorAll('.notes').length).toBe(0);
-  })
-
-  it('should edit the sticky note', () => {
-
   })
 
   it('should be align items to the center horizontally', () => {
@@ -115,6 +118,20 @@ describe('StickyNotesContainerComponent', () => {
     el.querySelector('#vertical-space-between').dispatchEvent(new Event('click'))
     fixture.detectChanges()
     expect(el.querySelector('.notes-container').getAttribute("style").startsWith("place-content: space-between")).toBeTrue()
+  })
+
+  xit('should edit the sticky note', () => {
+    const editButton: HTMLElement = el.querySelector('#edit')
+    editButton.dispatchEvent(new Event('click'))
+    const textArea: HTMLInputElement = elEdit.querySelector(".mat-input-element")
+    textArea.value = 'This is now edited';
+    textArea.dispatchEvent(new Event('input'));
+    const saveButton: HTMLElement = elEdit.querySelector('#saveNote')
+    fixtureEditComponent.detectChanges()
+    saveButton.dispatchEvent(new Event('click'))
+    const stickyNote: HTMLElement = el.querySelector('.notes')
+    fixture.detectChanges()
+    expect(stickyNote.innerHTML).toEqual(' This is now edited ')
   })
 
 });
