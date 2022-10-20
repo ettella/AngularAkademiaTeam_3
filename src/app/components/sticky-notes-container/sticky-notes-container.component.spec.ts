@@ -1,13 +1,11 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { Router } from '@angular/router';
-import { RouterTestingModule } from '@angular/router/testing';
 import { AppModule } from 'src/app/app.module';
 import { EditStickysComponent } from '../edit-stickys/edit-stickys.component';
 import { StickyNotesContainerComponent } from './sticky-notes-container.component';
 
 describe('StickyNotesContainerComponent', () => {
   let component: StickyNotesContainerComponent;
-  let editComponent: EditStickysComponent
+  let editComponent: EditStickysComponent;
   let fixture: ComponentFixture<StickyNotesContainerComponent>;
   let fixtureEditComponent: ComponentFixture<EditStickysComponent>;
   let el: any;
@@ -16,7 +14,7 @@ describe('StickyNotesContainerComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [ StickyNotesContainerComponent ],
-      imports: [AppModule, EditStickysComponent, RouterTestingModule.withRoutes([]) ]
+      imports: [AppModule]
     })
     .compileComponents();
 
