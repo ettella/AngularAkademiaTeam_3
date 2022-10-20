@@ -52,5 +52,4 @@ export class EditStickysComponent implements OnInit {
     this.router.navigate(['sticky']);
   }
 
-
 }
